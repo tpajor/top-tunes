@@ -1,25 +1,13 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.scss';
+import * as React from 'react';
 
-class App extends Component {
+import './App.scss';
+import TopTunesContainer from './Components/TopTunes/TopTunesMainView/TopTunesMainView';
+
+class App extends React.PureComponent {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className='container--main'>
+        <TopTunesContainer/>
       </div>
     );
   }

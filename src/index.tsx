@@ -24,7 +24,7 @@ if (module.hot) {
 
     render(
       <AppContainer>
-          <NewApp/>
+        <NewApp/>
       </AppContainer>,
       rootEl
     );
