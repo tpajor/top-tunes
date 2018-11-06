@@ -1,8 +1,6 @@
 import * as React from 'react';
 import { Subject } from 'rxjs';
 
-import './Quicksearch.scss';
-
 interface IProps {
   term$: Subject<string>;
 }
@@ -18,10 +16,10 @@ class Quicksearch extends React.PureComponent<IProps> {
 
   render() {
     return (
-      <div className="container-quicksearch">
+      <div className="container container-formControl">
         <input 
           type="text" 
-          className='form-input--search' 
+          className='input form-input--search' 
           placeholder="Type here to filter the list"
           onChange={this.handleInputChange}
         />

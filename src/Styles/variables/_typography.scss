@@ -1,0 +1,26 @@
+@charset 'UTF-8';
+
+$global-light-font-family: 'Roboto Light';
+$global-regular-font-family: 'Roboto Regular';
+$global-bold-font-family: 'Roboto Bold';
+$global-semibold-font-family: 'Roboto Semibold';
+
+@font-face {
+  font-family: $global-light-font-family;
+  src: url('Shared/Assets/fonts/Roboto-Light.ttf');
+}
+
+@font-face {
+  font-family: $global-regular-font-family;
+  src: url('Shared/Assets/fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: $global-bold-font-family;
+  src: url('Shared/Assets/fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+  font-family: $global-semibold-font-family;
+  src: url('Shared/Assets/fonts/Roboto-Medium.ttf');
+}

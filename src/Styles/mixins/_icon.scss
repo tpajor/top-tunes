@@ -1,0 +1,13 @@
+@charset 'UTF-8';
+@mixin icon($url: url(''), $width: 25px, $height: 25px, $position: right, $repeat: no-repeat, $background: white) {
+  background: $url;
+  background-position: $position; 
+  background-repeat: $repeat;
+  background-size: $height $width;
+  background-color: $background;         
+  position: absolute;
+  height: $height;
+  width: $width;
+  opacity: 1;
+  z-index: 102;
+}

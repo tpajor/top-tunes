@@ -1,0 +1,79 @@
+@import './variables/typography';
+
+$palette: (
+  background:#F6F6F6,
+  listItemBackground: rgba(226, 226, 226, 1),
+  listItemBackgroundAlternate: rgba(226, 226, 226, 0.5),
+  inputBackground: white,
+
+  titleText: #0097D9,
+  text: #36363A,
+  placeholderText: #7C7C95,
+
+  listItemShadow: 2px 2px 6px rgba(0, 0, 0, 0.24),
+  listItemShadowAlternate: 2px 2px 6px rgba(0, 0, 0, 0.16),
+  inputBorder: #D2D2D2,
+);
+
+$typography: (
+  family: (
+    light: $global-light-font-family,
+    regular: $global-regular-font-family,
+    semibold: $global-semibold-font-family,
+    bold: $global-bold-font-family,
+  ),
+
+  sizes: (
+    sm: 0.875rem,
+    md: 1rem,
+    lg: 2rem,
+  ),
+
+  lineHeights: (
+    sm: 1.25rem,
+    md: 1.5rem,
+    lg: 3rem,
+  ),
+);
+
+$dimensions: (
+  margin: (
+    center: 0 auto,
+    xs: 10px,
+    sm: 15px,
+    md: 30px,
+    lg: 40px,
+  ),
+
+  width: (
+    maxWidth: 1148px,
+    inputs: 275px,
+
+    inReferenceToParent: (
+      half: 50%,
+      smaller: 80%,
+      match: 100%,
+    ),
+  ),
+
+  height: (
+    inputs: 40px,
+  ),
+
+  padding: (
+    xs: 10px,
+    sm: 15px,
+    md: 30px,
+    lg: 50px,
+    inputs: 0 30px 0 20px,
+  )
+);
+
+$border: (
+  radius: (
+    standard: 4px,
+    circle: 50%,
+  ),
+
+  inputs: 1px solid #d2d2d2,
+);

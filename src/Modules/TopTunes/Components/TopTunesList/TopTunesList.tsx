@@ -47,8 +47,8 @@ class TopTunesList extends React.PureComponent<any, IState> {
 
   render() {
     return (
-      <div className="container--list">
-        <div className="container-page--quicksearch">
+      <div className="container container--list">
+        <div className="container container-page--quicksearch">
           <Quicksearch 
             term$={this.state.termChange$}
           />

@@ -1,7 +1,5 @@
 import * as React from 'react';
 
-import './TopTunesListItem.scss';
-
 interface iProps {
   item: any;
   position: number;
@@ -9,9 +7,9 @@ interface iProps {
 
 const TopTunesListItem = ({ item, position }: iProps) => {
   return (
-    <div className='container--item'>
-      <h5 className='item-title'>
-        <span className='item-title--position'>
+    <div className='container container--item'>
+      <h5 className='text listItem-title'>
+        <span className='text listItem-title--highlight'>
           {+position + 1}
         </span>
         {item.title.label}

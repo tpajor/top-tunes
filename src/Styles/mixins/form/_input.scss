@@ -1,0 +1,26 @@
+@import '../icon';
+
+.input {
+  box-sizing: border-box;
+  height: map-deep-get($dimensions, width, inReferenceToParent, match);
+  width: map-deep-get($dimensions, width, inReferenceToParent, match);
+  border-radius: map-deep-get($border, radius, standard);
+  border: map-deep-get($border, inputs);
+  font-size: map-deep-get($typography, sizes, md);
+  color: map-deep-get($palette, text);
+  -webkit-text-fill-color: map-deep-get($palette, text);
+  padding: map-deep-get($dimensions, padding, inputs);
+
+  &::placeholder {
+    color: map-deep-get($palette, placeholderText);
+    -webkit-text-fill-color: map-deep-get($palette, placeholderText);
+  }
+}
+
+.form-input--search {
+  + .spyglass {
+    @include icon($url: url('Shared/Assets/icons/ICON-Search.svg'), $height: 18px);
+    top: 11px;
+    right: 7px;
+  }
+}
