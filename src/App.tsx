@@ -1,7 +1,8 @@
 import * as React from 'react';
 
 import './App.scss';
-import TopTunesContainer from './Components/TopTunes/TopTunesMainView/TopTunesMainView';
+import TopTunesContainer from './Modules/TopTunes/Components/TopTunesMainView/TopTunesMainView';
+
 
 class App extends React.PureComponent {
   render() {
