@@ -16,10 +16,10 @@ class Quicksearch extends React.PureComponent<IProps> {
 
   render() {
     return (
-      <div className='container container-formControl'>
+      <div className='container container--form-control'>
         <input
           type='text'
-          className='input form-input--search'
+          className='input input--search'
           placeholder='Type here to filter the list'
           onChange={this.handleInputChange}
         />

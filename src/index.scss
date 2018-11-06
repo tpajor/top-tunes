@@ -1,9 +1,9 @@
 @import './Styles/theme';
 @import './Styles/functions/deep-get';
 @import './Styles/variables/typography';
-@import './Styles/mixins/container';
-@import './Styles/mixins/text';
-@import './Styles/mixins/form/input';
+@import './Styles/elements/container';
+@import './Styles/elements/text';
+@import './Styles/elements/form/input';
 
 body {
   margin: 0;

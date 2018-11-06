@@ -7,9 +7,9 @@ interface IProps {
 
 const TopTunesListItem = ({ item, position }: IProps) => {
   return (
-    <div className='container container--item'>
-      <h5 className='text listItem-title'>
-        <span className='text listItem-title--highlight'>
+    <div className='container container--list-item'>
+      <h5 className='text text--list-item-title'>
+        <span className='text text--list-item-title text--highlight'>
           {+position + 1}
         </span>
         {item.title.label}

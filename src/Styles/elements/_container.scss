@@ -1,0 +1,47 @@
+@import '../theme';
+@import '../functions/deep-get';
+
+.container {
+  box-sizing: border-box;
+  width: map-deep-get($dimensions, width, inReferenceToParent, match);
+
+  &--main {
+    margin: map-deep-get($dimensions, margin, center);
+    max-width: map-deep-get($dimensions, width, maxWidth);
+  }
+  
+  &--page {
+    padding: map-deep-get($dimensions, padding, lg) 0;
+    text-align: center;
+  }
+  
+  &--list {
+  
+    >:nth-child(even) {
+      background-color: map-deep-get($palette, listItemBackground);
+      box-shadow: map-deep-get($palette, listItemShadow);
+    }
+  
+    >:nth-child(odd) {
+      background-color: map-deep-get($palette, listItemBackgroundAlternate);;
+      box-shadow: map-deep-get($palette, listItemShadowAlternate);
+    }
+  }
+  
+  &--list-item {
+    padding: map-deep-get($dimensions, padding, sm);
+    width: map-deep-get($dimensions, width, inReferenceToParent, smaller);
+    margin: map-deep-get($dimensions, margin, center);
+    margin-bottom: map-deep-get($dimensions, margin, sm);
+    border-radius: map-deep-get($border, radius, standard);
+  }
+  
+  &--form-control {
+    position: relative;
+    height: map-deep-get($dimensions, height, inputs);
+    width: map-deep-get($dimensions, width, inputs);
+    margin: map-deep-get($dimensions, margin, center);
+    margin-bottom: map-deep-get($dimensions, margin, md);
+  }
+}
+

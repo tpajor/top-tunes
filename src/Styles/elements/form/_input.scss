@@ -1,4 +1,4 @@
-@import '../icon';
+@import '../../mixins/icon';
 
 .input {
   box-sizing: border-box;
@@ -15,12 +15,13 @@
     color: map-deep-get($palette, placeholderText);
     -webkit-text-fill-color: map-deep-get($palette, placeholderText);
   }
-}
 
-.form-input--search {
-  + .spyglass {
-    @include icon($url: url('Shared/Assets/icons/ICON-Search.svg'), $height: 18px);
-    top: 11px;
-    right: 7px;
+  &--search {
+    + .spyglass {
+      @include icon($url: url('Shared/Assets/icons/ICON-Search.svg'), $height: 18px);
+      top: 11px;
+      right: 7px;
+    }
   }
 }
+
