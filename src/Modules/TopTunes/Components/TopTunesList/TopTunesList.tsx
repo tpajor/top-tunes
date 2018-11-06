@@ -6,8 +6,6 @@ import { debounceTime } from 'rxjs/operators';
 import './TopTunesList.scss';
 import TopTunesListItem from '../TopTunesListItem/TopTunesListItem';
 import Quicksearch from '../../../../Shared/Components/Quicksearch';
-import { resolve } from 'dns';
-import { rejects } from 'assert';
 
 interface IState {
   allIdsToShow: string[];
