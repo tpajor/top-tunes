@@ -1,11 +1,11 @@
 import * as React from 'react';
 
-interface iProps {
+interface IProps {
   item: any;
   position: number;
-};
+}
 
-const TopTunesListItem = ({ item, position }: iProps) => {
+const TopTunesListItem = ({ item, position }: IProps) => {
   return (
     <div className='container container--item'>
       <h5 className='text listItem-title'>
@@ -16,6 +16,6 @@ const TopTunesListItem = ({ item, position }: iProps) => {
       </h5>
     </div>
   );
-}
+};
 
 export default TopTunesListItem;

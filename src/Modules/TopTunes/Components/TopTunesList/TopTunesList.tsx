@@ -8,11 +8,11 @@ import TopTunesListItem from '../TopTunesListItem/TopTunesListItem';
 import Quicksearch from '../../../../Shared/Components/Quicksearch';
 
 interface IState {
-  allIdsToShow: string[],
+  allIdsToShow: string[];
   allIds: string[];
   byIds: any[];
-  termChange$: Subject<string>,
-};
+  termChange$: Subject<string>;
+}
 
 class TopTunesList extends React.PureComponent<any, IState> {
   state = {
@@ -21,12 +21,11 @@ class TopTunesList extends React.PureComponent<any, IState> {
     byIds: ([] as any[]),
     termChange$: new Subject<string>(),
   };
-  
 
   componentDidMount() {
     axios.get('https://itunes.apple.com/us/rss/topalbums/limit=100/json').then((res: any) => {
       const keys: any[] = [];
-      for (let key in res.data.feed.entry) {
+      for (const key in res.data.feed.entry) {
         keys.push(key);
       }
 
@@ -45,20 +44,33 @@ class TopTunesList extends React.PureComponent<any, IState> {
     });
   }
 
-  render() {
-    return (
-      <div className="container container--list">
-        <div className="container container-page--quicksearch">
-          <Quicksearch 
-            term$={this.state.termChange$}
-          />
-        </div>
-        {this.state.allIdsToShow.length > 0 ? this.state.allIdsToShow.map((id: any) => 
-          <TopTunesListItem key={id}
+  mapListItems = () => {
+    if (this.state.allIds.length > 0) {
+      if (this.state.allIdsToShow.length > 0) {
+        return this.state.allIdsToShow.map((id: any) => (
+          <TopTunesListItem
+            key={id}
             position={id}
             item={this.state.byIds[id]}
           />
-        ) : 'loading'}
+        ));
+      } else {
+        return 'no entries match the query';
+      }
+    } else {
+      return 'loading';
+    }
+  }
+
+  render() {
+    return (
+      <div className='container container--list'>
+        <div className='container container-page--quicksearch'>
+          <Quicksearch
+            term$={this.state.termChange$}
+          />
+        </div>
+        {this.mapListItems()}
         <br/>
       </div>
     );

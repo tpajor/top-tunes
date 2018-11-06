@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import TopTunesList from '../TopTunesList/TopTunesList';
 
-class TopTunesContainer extends React.PureComponent {
+class TopTunesMainView extends React.PureComponent {
 
   render() {
     return (
@@ -16,4 +16,4 @@ class TopTunesContainer extends React.PureComponent {
   }
 }
 
-export default TopTunesContainer;
+export default TopTunesMainView;
