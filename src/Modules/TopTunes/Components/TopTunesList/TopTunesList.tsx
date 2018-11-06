@@ -6,6 +6,8 @@ import { debounceTime } from 'rxjs/operators';
 import './TopTunesList.scss';
 import TopTunesListItem from '../TopTunesListItem/TopTunesListItem';
 import Quicksearch from '../../../../Shared/Components/Quicksearch';
+import { resolve } from 'dns';
+import { rejects } from 'assert';
 
 interface IState {
   allIdsToShow: string[];
@@ -15,10 +17,10 @@ interface IState {
 }
 
 class TopTunesList extends React.PureComponent<any, IState> {
-  state = {
-    allIdsToShow: ([] as string[]),
-    allIds: ([] as string[]),
-    byIds: ([] as any[]),
+  public state: IState = {
+    allIdsToShow: [],
+    allIds: [],
+    byIds: [],
     termChange$: new Subject<string>(),
   };
 
@@ -44,7 +46,7 @@ class TopTunesList extends React.PureComponent<any, IState> {
     });
   }
 
-  mapListItems = () => {
+  private readonly mapListItems = () => {
     if (this.state.allIds.length > 0) {
       if (this.state.allIdsToShow.length > 0) {
         return this.state.allIdsToShow.map((id: any) => (
@@ -62,7 +64,7 @@ class TopTunesList extends React.PureComponent<any, IState> {
     }
   }
 
-  render() {
+  public render() {
     return (
       <div className='container container--list'>
         <div className='container'>
