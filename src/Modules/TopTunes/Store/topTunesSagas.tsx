@@ -1,4 +1,4 @@
-import { put, fork, takeEvery, call } from 'redux-saga/effects';
+import { put, takeEvery, call } from 'redux-saga/effects';
 import TopTunesService from '../Services/TopTunesService';
 import { topTunesActionTypes, getiTunesSuccess, getiTunesError } from './topTunesActions';
 import { SagaIterator } from 'redux-saga';
@@ -14,5 +14,5 @@ function* getiTunes(topTunesService: TopTunesService): SagaIterator {
 }
 
 export function* topTunesSaga(topTunesService: TopTunesService): SagaIterator {
-  yield fork(takeEvery, topTunesActionTypes.GET_ITUNES_START, () => getiTunes(topTunesService) as SagaIterator);
+  yield takeEvery(topTunesActionTypes.GET_ITUNES_START, () => getiTunes(topTunesService) as SagaIterator);
 }
