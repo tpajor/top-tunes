@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import TopTunesMainView from './Modules/TopTunes/Components/TopTunesMainView/TopTunesMainView';
+import TopTunesMainView from './Modules/TopTunes/Components/TopTunesMainView';
 
 class App extends React.PureComponent {
   render() {

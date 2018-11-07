@@ -1,5 +1,8 @@
 @import '../theme';
 @import '../functions/deep-get';
+@import '../variables/dimensions';
+@import '../mixins/flexbox';
+@import '../mixins/icon';
 
 .container {
   box-sizing: border-box;
@@ -16,7 +19,6 @@
   }
   
   &--list {
-  
     >:nth-child(even) {
       background-color: map-deep-get($palette, listItemBackground);
       box-shadow: map-deep-get($palette, listItemShadow);
@@ -43,5 +45,37 @@
     margin: map-deep-get($dimensions, margin, center);
     margin-bottom: map-deep-get($dimensions, margin, md);
   }
+
+  &--list-info {
+    @include flexbox(column, center, center);
+    height: $list-height;
+    width: map-deep-get($dimensions, width, inReferenceToParent, smaller);
+    margin: map-deep-get($dimensions, margin, center);
+    background-color: inherit !important;
+    box-shadow: none !important;
+    padding-bottom: map-deep-get($dimensions, padding, xlg);
+  }
+
+  &--icon {
+    @include icon($url: url('Shared/Assets/icons/ICON_Ice_truck.svg'), $height: 150px, $width: 150px, $background: inherit);
+    margin-top: map-deep-get($dimensions, margin, xlg);
+  }
+
+  &--spinner-icon {
+    background-color: map-deep-get($palette, alternateText);
+    height: map-deep-get($dimensions, height, spinner);
+    width: map-deep-get($dimensions, width, spinner);
+    animation: spin 3s infinite;
+    transform: rotate(30deg);
+    margin-bottom: map-deep-get($dimensions, margin, sm);
+  }
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

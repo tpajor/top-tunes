@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import TopTunesList from '../TopTunesList/TopTunesList';
+import TopTunesListContainer from '../Containers/TopTunesListContainer';
 
 class TopTunesMainView extends React.PureComponent {
   public render() {
@@ -9,7 +9,7 @@ class TopTunesMainView extends React.PureComponent {
         <h1 className='text text--page-title'>
           Welcome to top 100 iTunes list
         </h1>
-        <TopTunesList />
+        <TopTunesListContainer />
       </div>
     );
   }

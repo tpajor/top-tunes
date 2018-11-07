@@ -10,9 +10,9 @@ const TopTunesListItem = ({ item, position }: IProps) => {
     <div className='container container--list-item'>
       <h5 className='text text--list-item-title'>
         <span className='text text--list-item-title text--highlight'>
-          {+position + 1}
+          {position + 1}
         </span>
-        {item.title.label}
+        {item.title}
       </h5>
     </div>
   );
