@@ -43,35 +43,36 @@ class TopTunesList extends React.PureComponent<IProps, IState> {
   }
 
   private readonly mapListItems = () => {
-    if (!this.props.isLoading) {
-      if (this.props.error === '') {
-        if (this.props.filteredIds.length > 0) {
-          return this.props.filteredIds.map((id: any, i: number) => (
-            <TopTunesListItem
-              iteration={i}
-              key={id}
-              position={id}
-              item={this.props.byIds[id]}
-            />
-          ));
-        } else {
-          return (
-            <div className='container container--list-info'>
-              <NoResults />
-            </div>
-          );
-        }
-      } else {
-        return (
-          <div className='container container--list-info'>
-            <Error error={this.props.error}/>
-          </div>
-        );
-      }
-    } else {
+    if (this.props.isLoading) {
       return <Spinner text='LOADING' />;
     }
+
+    if (this.props.error !== '') {
+      return (
+        <div className='container container--list-info'>
+          <Error error={this.props.error}/>
+        </div>
+      );
+    }
+
+    if (this.props.filteredIds.length === 0) {
+      return (
+        <div className='container container--list-info'>
+          <NoResults />
+        </div>
+      );
+    }
+
+    return this.props.filteredIds.map((id: number, i: number) => (
+      <TopTunesListItem
+        iteration={i}
+        key={id}
+        position={id}
+        item={this.props.byIds[id]}
+      />
+    ));
   }
+
   renderTuneDetailRoute = () => {
     if (this.props.isLoading || this.props.error !== '' || this.props.filteredIds.length === 0) {
       return null;
@@ -83,12 +84,14 @@ class TopTunesList extends React.PureComponent<IProps, IState> {
   public render() {
     return (
       <div className='container container--list'>
-      {this.renderTuneDetailRoute()}
+        {this.renderTuneDetailRoute()}
+
         <div className='container'>
           <Quicksearch
             term$={this.state.termChange$}
           />
         </div>
+
         {this.mapListItems()}
       </div>
     );

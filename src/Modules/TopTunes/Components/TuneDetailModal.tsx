@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { History } from 'history';
 import { urls } from '../../../Routing/urls';
 import IITune from '../../../Shared/Interfaces/models/IITune';
+import TuneDetailTextItem from './TuneDetailTextItem';
 
 interface IState {
   isClosing: boolean;
@@ -61,6 +62,7 @@ class TuneDetailModal extends React.PureComponent<IProps, IState> {
           >
             X
           </Link>
+
           <header className='container container--modal-header'>
             <div className='link link--back' onClick={this.handleClosingAnimation} />
             <h1 className='text text--title'>
@@ -68,14 +70,17 @@ class TuneDetailModal extends React.PureComponent<IProps, IState> {
               <span className='text text--title-secondary'>{this.props.tune.name}</span>
             </h1>
           </header>
+
           <section className='container container--modal-section'>
             <div className='container container--modal-item'>
               <img className='image image--cover' src={this.props.tune.photo} alt='cover' />
             </div>
+
             <div className='container container--modal-item'>
               <h2 className='text text--modal-item-title'>
                 Visit profile
               </h2>
+
               <a 
                 href={this.props.tune.link} 
                 target='_blank' 
@@ -88,46 +93,16 @@ class TuneDetailModal extends React.PureComponent<IProps, IState> {
                 <div className='container container--go-to-icon' />
               </a>
             </div>
-            <div className='container container--modal-item'>
-              <h2 className='text text--modal-item-title'>
-                Category
-              </h2>
-              <p className='text text--modal-item-text'>
-                {this.props.tune.category}
-              </p>
-            </div>
-            <div className='container container--modal-item'>
-              <h2 className='text text--modal-item-title'>
-                Number of tracks
-              </h2>
-              <p className='text text--modal-item-text'>
-                {this.props.tune.numberOfSongs}
-              </p>
-            </div>
-            <div className='container container--modal-item'>
-              <h2 className='text text--modal-item-title'>
-                Released
-              </h2>
-              <p className='text text--modal-item-text'>
-                {this.formatDate()}
-              </p>
-            </div>
-            <div className='container container--modal-item'>
-              <h2 className='text text--modal-item-title'>
-                Price
-              </h2>
-              <p className='text text--modal-item-text'>
-                {this.props.tune.price}
-              </p>
-            </div>
-            <div className='container container--modal-item'>
-              <h2 className='text text--modal-item-title'>
-                Producer
-              </h2>
-              <p className='text text--modal-item-rights'>
-                {this.formatRights()}
-              </p>
-            </div>
+
+            <TuneDetailTextItem title='Category' text={this.props.tune.category} />
+
+            <TuneDetailTextItem title='Number of tracks' text={this.props.tune.numberOfSongs} />
+
+            <TuneDetailTextItem title='Released' text={this.formatDate()} />
+
+            <TuneDetailTextItem title='Price' text={this.props.tune.price} />
+
+            <TuneDetailTextItem title='Producer' text={this.formatRights()} />
           </section>
         </div>
       </div>

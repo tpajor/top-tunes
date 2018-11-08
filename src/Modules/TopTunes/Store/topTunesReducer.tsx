@@ -30,9 +30,9 @@ export function dataReducer(state = initialDataState, action: any): ITopTunesDat
       const keys: number[] = [];
       const data: { [key: string]: IITune } = {};
 
-      for (let i = 0; i < action.payload.length; i++) {
-        keys.push(i);
-        data[i] = action.payload[i];
+      for (let key in action.payload) {
+        keys.push(+key);
+        data[key] = action.payload[key];
       }
 
       return { ...state, byIds: data, allIds: keys, filteredIds: keys };

@@ -108,7 +108,7 @@
     margin: map-deep-get($dimensions, margin, center);
     width: map-deep-get($dimensions, width, inReferenceToParent, smaller);
     margin-top: map-deep-get($dimensions, margin, md);
-    padding-bottom: map-deep-get($dimensions, padding, md);
+    padding-bottom: map-deep-get($dimensions, padding, sm);
   }
 
   &--modal-item {

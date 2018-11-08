@@ -44,7 +44,7 @@
   }
 
   &--visitiTunes {
-    @include flexbox(row, center, center);
+    @include flexbox(row, center, flex-end);
     text-decoration: none;
   }
 }

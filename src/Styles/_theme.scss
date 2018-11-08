@@ -54,6 +54,7 @@ $dimensions: (
     lg: 40px,
     xlg: 150px,
     relativeSm: 7.5%,
+    negativeSm: -15px,
   ),
 
   padding: (
@@ -70,7 +71,7 @@ $dimensions: (
     modalMaxWidth: 861px,
     inputs: 275px,
     spinner: 50px,
-    imageCover: 80px,
+    imageCover: 100px,
     matchViewport: 100vw,
 
     inReferenceToParent: (
