@@ -4,9 +4,10 @@ import { IRootState } from '../../../Store/rootReducer';
 import TuneDetailModal from '../Components/TuneDetailModal';
 import { IProps } from '../Components/TuneDetailModal';
 import { match } from 'react-router';
+import { params } from '../../../Routing/urls';
 
 interface IRouteParams {
-  id: string;
+  [kay: string]: string;
 }
 
 interface IOwnProps extends IProps {
@@ -15,7 +16,7 @@ interface IOwnProps extends IProps {
 
 const mapStateToProps = (state: IRootState, ownProps: IOwnProps) => {
   return ({
-    tune: state.topTunes.data.byIds[ownProps.match.params.id],
+    tune: state.topTunes.data.byIds[ownProps.match.params[params.topTunesDetail[0]]],
   });
 };
 
