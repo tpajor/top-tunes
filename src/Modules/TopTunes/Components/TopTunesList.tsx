@@ -1,12 +1,17 @@
 import * as React from 'react';
 import { Subject } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
+import { Route } from 'react-router-dom';
+import { LocationDescriptor } from 'history';
 
-import './TopTunesList.scss';
 import TopTunesListItem from './TopTunesListItem';
 import Quicksearch from '../../../Shared/Components/Quicksearch';
 import Spinner from '../../../Shared/Components/Spinner';
 import IITune from '../../../Shared/Interfaces/models/IITune';
+import { urls } from '../../../Routing/urls';
+import TuneDetailModalContainer from '../Containers/TuneDetailModalContainer';
+import NoResults from '../../../Shared/Components/NoResults';
+import Error from '../../../Shared/Components/Error';
 
 interface IState {
   termChange$: Subject<string>;
@@ -17,6 +22,7 @@ interface IProps {
   byIds: { [key: string]: IITune };
   isLoading: boolean;
   error: string;
+  location: LocationDescriptor;
   getiTunesStart: () => void;
   filteriTunes: (term: string) => void;
 }
@@ -40,8 +46,9 @@ class TopTunesList extends React.PureComponent<IProps, IState> {
     if (!this.props.isLoading) {
       if (this.props.error === '') {
         if (this.props.filteredIds.length > 0) {
-          return this.props.filteredIds.map((id: any) => (
+          return this.props.filteredIds.map((id: any, i: number) => (
             <TopTunesListItem
+              iteration={i}
               key={id}
               position={id}
               item={this.props.byIds[id]}
@@ -50,20 +57,14 @@ class TopTunesList extends React.PureComponent<IProps, IState> {
         } else {
           return (
             <div className='container container--list-info'>
-              <div className='container container--icon' />
-              <h4 className='text text--list-info'>
-                No results found
-              </h4>
+              <NoResults />
             </div>
           );
         }
       } else {
         return (
           <div className='container container--list-info'>
-            <h4 className='text text--list-error'>
-              {`${this.props.error}`}<br />
-              Please try again later
-            </h4>
+            <Error error={this.props.error}/>
           </div>
         );
       }
@@ -71,17 +72,24 @@ class TopTunesList extends React.PureComponent<IProps, IState> {
       return <Spinner text='LOADING' />;
     }
   }
+  renderTuneDetailRoute = () => {
+    if (this.props.isLoading || this.props.error !== '' || this.props.filteredIds.length === 0) {
+      return null;
+    } else {
+      return <Route path={urls.reactRouter.topTunesDetail} component={TuneDetailModalContainer} />;
+    }
+  }
 
   public render() {
     return (
       <div className='container container--list'>
+      {this.renderTuneDetailRoute()}
         <div className='container'>
           <Quicksearch
             term$={this.state.termChange$}
           />
         </div>
         {this.mapListItems()}
-        <br/>
       </div>
     );
   }

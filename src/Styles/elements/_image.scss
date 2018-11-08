@@ -1,0 +1,6 @@
+.image {
+  &--cover {
+    margin: map-deep-get($dimensions, margin, center);
+    width: map-deep-get($dimensions, width, imageCover);
+  }
+}

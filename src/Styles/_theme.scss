@@ -5,6 +5,8 @@ $palette: (
   listItemBackground: rgba(226, 226, 226, 1),
   listItemBackgroundAlternate: rgba(226, 226, 226, 0.5),
   inputBackground: white,
+  modalBackground: rgba(208, 208, 208, 0.6),
+  modalContentBackground: white,
 
   titleText: #0097D9,
   text: #36363A,
@@ -14,6 +16,9 @@ $palette: (
 
   listItemShadow: 2px 2px 6px rgba(0, 0, 0, 0.24),
   listItemShadowAlternate: 2px 2px 6px rgba(0, 0, 0, 0.16),
+  modalShadow: 5px 3px 15px rgba(0, 0, 0, 0.07),
+  textShadow: .5px .5px rgba(0, 0, 0, .7),
+  modalHeaderShadow: 0 5px 10px rgba(0, 0, 0, 0.5),
   inputBorder: #D2D2D2,
 );
 
@@ -48,23 +53,7 @@ $dimensions: (
     md: 30px,
     lg: 40px,
     xlg: 150px,
-  ),
-
-  width: (
-    maxWidth: 1148px,
-    inputs: 275px,
-    spinner: 50px,
-
-    inReferenceToParent: (
-      half: 50%,
-      smaller: 80%,
-      match: 100%,
-    ),
-  ),
-
-  height: (
-    inputs: 40px,
-    spinner: 50px,
+    relativeSm: 7.5%,
   ),
 
   padding: (
@@ -74,7 +63,36 @@ $dimensions: (
     lg: 50px,
     xlg: 150px,
     inputs: 0 30px 0 20px,
-  )
+  ),
+
+  width: (
+    maxWidth: 1148px,
+    modalMaxWidth: 861px,
+    inputs: 275px,
+    spinner: 50px,
+    imageCover: 80px,
+    matchViewport: 100vw,
+
+    inReferenceToParent: (
+      half: 50%,
+      modal: 75%,
+      smaller: 80%,
+      match: 100%,
+    ),
+  ),
+
+  height: (
+    inputs: 40px,
+    spinner: 50px,
+    matchViewport: 100vh,
+
+    inReferenceToParent: (
+      half: 50%,
+      modal: 75%,
+      smaller: 80%,
+      match: 100%,
+    ),
+  ),
 );
 
 $border: (

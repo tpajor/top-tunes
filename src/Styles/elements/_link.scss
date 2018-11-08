@@ -1,0 +1,51 @@
+@import '../theme';
+@import '../functions/deep-get';
+@import '../mixins/flexbox';
+@import '../variables/zIndexes';
+
+%list-item {
+  padding: map-deep-get($dimensions, padding, sm);
+  width: map-deep-get($dimensions, width, inReferenceToParent, smaller);
+  margin: map-deep-get($dimensions, margin, center);
+  margin-bottom: map-deep-get($dimensions, margin, sm);
+  border-radius: map-deep-get($border, radius, standard);
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+
+  &--list-item-odd {
+    @extend %list-item;
+    background-color: map-deep-get($palette, listItemBackgroundAlternate);
+    box-shadow: map-deep-get($palette, listItemShadowAlternate);
+  }
+
+  &--list-item-even {
+    @extend %list-item;
+    background-color: map-deep-get($palette, listItemBackground);
+    box-shadow: map-deep-get($palette, listItemShadow);
+  }
+
+  &--close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: map-deep-get($palette, text);
+    font-size: map-deep-get($typography, sizes, md);
+    text-shadow: map-deep-get($palette, textShadow);
+  }
+
+  &--back {
+    @include icon($url: url('Shared/Assets/icons/ICON-Back.svg'), $height: 40px, $width: 40px);
+    position: initial;
+    margin-right: map-deep-get($dimensions, margin, md);
+    cursor: pointer;
+  }
+
+  &--visitiTunes {
+    @include flexbox(row, center, center);
+    text-decoration: none;
+  }
+}
+

@@ -48,6 +48,7 @@
       }
     ],
     "variable-name": false,
-    "no-boolean-literal-compare": false
+    "no-boolean-literal-compare": false,
+    "jsx-boolean-value": false
   }
 }

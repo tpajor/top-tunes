@@ -1,12 +1,13 @@
 import IDtoiTune from '../../../Shared/Interfaces/dto/IDtoiTune';
 import IITune from '../../../Shared/Interfaces/models/IITune';
 import HttpClient from '../../../Shared/Services/HttpClient';
+import { urls } from '../../../Routing/urls';
 
 export default class TopTunesService {
   public async getTopiTunes(): Promise<IITune[]> {
     const http = new HttpClient();
 
-    const res = await http.get('https://itunes.apple.com/us/rss/topalbums/limit=100/json');
+    const res = await http.get(urls.api.getiTunes);
   
     return this.mapiTunesDtoToModel(res.data.feed.entry);
   }

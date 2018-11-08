@@ -1,3 +1,5 @@
+@import '../variables/zIndexes';
+
 @charset 'UTF-8';
 @mixin icon($url: url(''), $width: 25px, $height: 25px, $position: right, $repeat: no-repeat, $background: white) {
   background: $url;
@@ -8,6 +10,7 @@
   position: absolute;
   height: $height;
   width: $width;
+  min-width: $width;
   opacity: 1;
-  z-index: 102;
+  z-index: $icon;
 }

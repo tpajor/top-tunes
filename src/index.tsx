@@ -28,7 +28,8 @@ const render = (Component: any) => {
   ReactDOM.render(
     <AppContainer>
       <Provider store={store}>
-        <Component />
+
+          <Component />
       </Provider>
     </AppContainer>,
     rootEl

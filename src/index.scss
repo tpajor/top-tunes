@@ -1,9 +1,17 @@
 @import './Styles/theme';
+
 @import './Styles/functions/deep-get';
+
 @import './Styles/variables/typography';
+
 @import './Styles/elements/container';
 @import './Styles/elements/text';
 @import './Styles/elements/form/input';
+@import './Styles/elements/link';
+@import './Styles/elements/image';
+
+@import './Styles/animations/spinner';
+@import './Styles/animations/slide';
 
 body {
   margin: 0;
