@@ -1,9 +1,22 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
 import App from './App';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+function setup() {
+  const props = {};
+
+  const wrapper = shallow(<App {...props} />);
+
+  return {
+    wrapper,
+    props,
+  };
+}
+
+describe('App component', () => {
+  it('should match snapshot if no change was intended', () => {
+    const { wrapper } = setup();
+
+    expect(wrapper).toMatchSnapshot();
+  });
 });
