@@ -1,7 +1,8 @@
 import { put, takeEvery, call } from 'redux-saga/effects';
+import { SagaIterator } from 'redux-saga';
+
 import TopTunesService from '../Services/TopTunesService';
 import { topTunesActionTypes, getiTunesSuccess, getiTunesError } from './topTunesActions';
-import { SagaIterator } from 'redux-saga';
 import IITune from '../../../Shared/Interfaces/models/IITune';
 
 function* getiTunes(topTunesService: TopTunesService): SagaIterator {

@@ -1,15 +1,14 @@
 import * as React from 'react';
-// tslint:disable-next-line:import-name
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
+import { createStore, applyMiddleware, compose } from 'redux';
+import { Provider } from 'react-redux';
+import createSagaMiddleware from 'redux-saga';
 
 import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { rootReducer } from './Store/rootReducer';
-import { createStore, applyMiddleware, compose } from 'redux';
-import { Provider } from 'react-redux';
-import createSagaMiddleware from 'redux-saga';
 import { createSagas } from './Store/createSagas';
 
 const rootEl = document.getElementById('root');
@@ -28,7 +27,6 @@ const render = (Component: any) => {
   ReactDOM.render(
     <AppContainer>
       <Provider store={store}>
-
           <Component />
       </Provider>
     </AppContainer>,
@@ -44,7 +42,6 @@ declare let module: { hot: any };
 if (module.hot) {
   module.hot.accept('./App', () => {
     const NewApp = require('./App').default;
-
     render(NewApp);
   });
 }

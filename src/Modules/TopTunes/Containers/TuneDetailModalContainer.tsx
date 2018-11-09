@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
+import { match } from 'react-router';
 
 import { IRootState } from '../../../Store/rootReducer';
 import { IProps } from '../Components/TuneDetailModal';
-import { match } from 'react-router';
 import { params } from '../../../Routing/urls';
 import TuneDetailModalLoadble from '../Lazy/TuneDetailModalLoadble';
 

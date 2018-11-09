@@ -1,5 +1,6 @@
-import IITune from '../../../Shared/Interfaces/models/IITune';
 import { combineReducers, Reducer, AnyAction } from 'redux';
+
+import IITune from '../../../Shared/Interfaces/models/IITune';
 import { topTunesActionTypes } from './topTunesActions';
 
 export interface ITopTunesDataState {

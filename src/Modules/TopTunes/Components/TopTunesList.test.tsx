@@ -5,10 +5,6 @@ import { Subject, Subscription } from 'rxjs';
 import TopTunesList, { IProps, IState } from './TopTunesList';
 import { iTunes } from '../../../Shared/Interfaces/__mocks__/ITuneMocks';
 
-const initialState: IState = {
-  termChange$: new Subject<string>(),
-};
-
 function setup() {
   const props: IProps = {
     filteredIds: [ 0, 1, 2 ],
@@ -41,7 +37,6 @@ describe('App component', () => {
 
   it('should call filteriTunes when next is called on termChange$', (done) => {
     const { wrapper, props } = setup();
-    wrapper.setState({ ...initialState });
 
     wrapper.instance().componentDidMount!();
 
