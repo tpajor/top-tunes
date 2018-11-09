@@ -15,6 +15,11 @@
     font-size: map-deep-get($typography, sizes, xlg);
     line-height: map-deep-get($typography, lineHeights, xlg);
     color: map-deep-get($palette, titleText);
+
+    @include mobile-screen {
+      font-size: map-deep-get($typography, sizes, lg);
+      line-height: map-deep-get($typography, lineHeights, lg);
+    }
   }
 
   &--title-secondary {

@@ -3,7 +3,7 @@
       @if map-has-key($map, $key) {
         $map: map-get($map, $key);
       } @else {
-        @error "Sorry, but `#{$map}` does not have value `#{$key}`";
+        @error "Sorry, but one of values you tried to map with map-deep-get does not exist";
       }
   }
   @return $map;

@@ -1,4 +1,5 @@
 @import './variables/typography';
+@import './variables/resolution';
 
 $palette: (
   background:#F6F6F6,
@@ -7,6 +8,7 @@ $palette: (
   inputBackground: white,
   modalBackground: rgba(208, 208, 208, 0.6),
   modalContentBackground: white,
+  hidden: rgba(255, 255, 255, 0),
 
   titleText: #0097D9,
   text: #36363A,
@@ -67,12 +69,13 @@ $dimensions: (
   ),
 
   width: (
-    maxWidth: 1148px,
+    maxWidth: $max-content-width,
     modalMaxWidth: 861px,
     inputs: 275px,
     spinner: 50px,
     imageCover: 100px,
     matchViewport: 100vw,
+    modalItem: 300px,
 
     inReferenceToParent: (
       half: 50%,
@@ -86,6 +89,7 @@ $dimensions: (
     inputs: 40px,
     spinner: 50px,
     matchViewport: 100vh,
+    modalItem: 140px,
 
     inReferenceToParent: (
       half: 50%,

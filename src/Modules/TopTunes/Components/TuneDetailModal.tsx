@@ -69,6 +69,7 @@ class TuneDetailModal extends React.PureComponent<IProps, IState> {
               {this.props.tune.artist + ' - '}
               <span className='text text--title-secondary'>{this.props.tune.name}</span>
             </h1>
+            <div className='container container--modal-header-overlay' onClick={this.handleClosingAnimation} />
           </header>
 
           <section className='container container--modal-section'>

@@ -34,6 +34,10 @@
     color: map-deep-get($palette, text);
     font-size: map-deep-get($typography, sizes, md);
     text-shadow: map-deep-get($palette, textShadow);
+
+    @include mobile-screen {
+      display: none;
+    }
   }
 
   &--back {
@@ -41,6 +45,12 @@
     position: initial;
     margin-right: map-deep-get($dimensions, margin, md);
     cursor: pointer;
+
+    @include mobile-screen {
+      @include icon($url: url('Shared/Assets/icons/ICON-Back.svg'), $height: 100px, $width: 100px);
+      position: initial;
+      margin: 0 0 map-deep-get($dimensions, margin, md) 0;
+    }
   }
 
   &--visitiTunes {

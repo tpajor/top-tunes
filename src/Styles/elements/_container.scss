@@ -3,6 +3,7 @@
 @import '../variables/dimensions';
 @import '../mixins/flexbox';
 @import '../mixins/icon';
+@import '../mixins/responsiveness';
 
 .container {
   box-sizing: border-box;
@@ -93,6 +94,12 @@
     position: relative;
     padding: map-deep-get($dimensions, padding, md) 0;
     overflow-y: auto;
+
+    @include mobile-screen {
+      width: map-deep-get($dimensions, width, matchViewport);
+      max-width: map-deep-get($dimensions, width, matchViewport);
+      height: map-deep-get($dimensions, height, matchViewport);
+    }
   }
 
   &--modal-header {
@@ -100,7 +107,29 @@
     margin: map-deep-get($dimensions, margin, center);
     width: map-deep-get($dimensions, width, inReferenceToParent, smaller);
     box-shadow: map-deep-get($palette, modalHeaderShadow);
-    padding: map-deep-get($dimensions, margin, xs),
+    padding: map-deep-get($dimensions, margin, xs);
+    position: relative;
+
+    @include mobile-screen {
+      @include flexbox(column, center, center);
+      padding: map-deep-get($dimensions, margin, md) map-deep-get($dimensions, margin, xs);
+    }
+  }
+
+  &--modal-header-overlay {
+    width: map-deep-get($dimensions, width, inReferenceToParent, match);
+    height: map-deep-get($dimensions, height, inReferenceToParent, match);
+    background-color: map-deep-get($palette, hidden);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: $modal-content-overlay;
+    display: none;
+
+    @include mobile-screen {
+      display: initial;
+    }
   }
 
   &--modal-section {
@@ -114,8 +143,8 @@
   &--modal-item {
     @include flexbox(column, space-between, space-between);
     padding: map-deep-get($dimensions, padding, md) map-deep-get($dimensions, padding, lg);
-    height: 140px;
-    width: 300px;
+    height: map-deep-get($dimensions, height, modalItem);
+    width: map-deep-get($dimensions, width, modalItem);
     border-bottom: 2px solid map-deep-get($palette, modalBackground);
   }
 }
