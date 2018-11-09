@@ -10,8 +10,8 @@ interface IProps {
 
 const TopTunesListItem = ({ item, position, iteration }: IProps) => {
   return (
-    <Link 
-      className={`link link--list-item${iteration % 2 === 0 ? '-even' : '-odd'}`} 
+    <Link
+      className={`link link--list-item${iteration % 2 === 0 ? '-even' : '-odd'}`}
       to={urls.reactRouter.topTunesDetailCreate(position)}
     >
       <h5 className='text text--list-item-title'>

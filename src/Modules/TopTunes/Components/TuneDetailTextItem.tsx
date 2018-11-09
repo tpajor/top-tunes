@@ -5,7 +5,7 @@ interface IProps {
   text: string | number;
 }
 
-const TuneDetailTextItem = ({title, text}: IProps) => {
+const TuneDetailTextItem = ({ title, text }: IProps) => {
   return (
   <div className='container container--modal-item'>
     <h2 className='text text--modal-item-title'>

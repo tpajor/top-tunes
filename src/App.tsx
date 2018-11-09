@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
 import TopTunesMainView from './Modules/TopTunes/Components/TopTunesMainView';
 import { urls } from './Routing/urls';

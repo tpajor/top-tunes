@@ -37,11 +37,10 @@ class TuneDetailModal extends React.PureComponent<IProps, IState> {
 
   formatDate = () => {
     return (
-      this.props.tune.releaseDate.getUTCFullYear() + '-' + 
-      (this.props.tune.releaseDate.getUTCMonth() < 10 
-        ? `0${this.props.tune.releaseDate.getUTCMonth()}-` : `${this.props.tune.releaseDate.getUTCMonth()}-`) +
-      (this.props.tune.releaseDate.getUTCDate() < 10 
-        ? `0${this.props.tune.releaseDate.getUTCDate()}` : `${this.props.tune.releaseDate.getUTCDate()}`)
+      `${this.props.tune.releaseDate.getUTCFullYear()}-${
+        this.props.tune.releaseDate.getUTCMonth() < 10 ? `0${this.props.tune.releaseDate.getUTCMonth()}-` : `${
+          this.props.tune.releaseDate.getUTCMonth()}-`}${this.props.tune.releaseDate.getUTCDate() < 10 ? `0${
+            this.props.tune.releaseDate.getUTCDate()}` : `${this.props.tune.releaseDate.getUTCDate()}`}`
     );
   }
 
@@ -55,9 +54,9 @@ class TuneDetailModal extends React.PureComponent<IProps, IState> {
     return (
       <div className={`container container--modal-background ${this.state.isClosing ? 'slide-out' : 'slide-in'}`}>
         <div className='container container--modal-main'>
-          <Link 
-            className='link link--close' 
-            to={urls.reactRouter.topTunes} 
+          <Link
+            className='link link--close'
+            to={urls.reactRouter.topTunes}
             onClick={this.handleClosingAnimation}
           >
             X
@@ -66,7 +65,7 @@ class TuneDetailModal extends React.PureComponent<IProps, IState> {
           <header className='container container--modal-header'>
             <div className='link link--back' onClick={this.handleClosingAnimation} />
             <h1 className='text text--title'>
-              {this.props.tune.artist + ' - '}
+              {`${this.props.tune.artist} - `}
               <span className='text text--title-secondary'>{this.props.tune.name}</span>
             </h1>
             <div className='container container--modal-header-overlay' onClick={this.handleClosingAnimation} />
@@ -82,10 +81,10 @@ class TuneDetailModal extends React.PureComponent<IProps, IState> {
                 Visit profile
               </h2>
 
-              <a 
-                href={this.props.tune.link} 
-                target='_blank' 
-                rel='noopener noreferrer' 
+              <a
+                href={this.props.tune.link}
+                target='_blank'
+                rel='noopener noreferrer'
                 className='link link--visitiTunes'
               >
                 <p className='text text--modal-item-text'>

@@ -4,7 +4,7 @@ interface IProps {
   error: string;
 }
 
-const Error = ({error}: IProps) => {
+const Error = ({ error }: IProps) => {
   return (
     <h4 className='text text--error'>
       {`${error}`}<br />

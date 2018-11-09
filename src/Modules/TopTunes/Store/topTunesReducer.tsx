@@ -30,7 +30,7 @@ export function dataReducer(state = initialDataState, action: any): ITopTunesDat
       const keys: number[] = [];
       const data: { [key: string]: IITune } = {};
 
-      for (let key in action.payload) {
+      for (const key in action.payload) {
         keys.push(+key);
         data[key] = action.payload[key];
       }
@@ -39,14 +39,14 @@ export function dataReducer(state = initialDataState, action: any): ITopTunesDat
     }
 
     case topTunesActionTypes.FILTER_ITUNES: {
-      return { 
-        ...state, 
+      return {
+        ...state,
         filteredIds: state.allIds.filter((id: number) => {
           return state.byIds[id].title.toLowerCase().includes(action.payload);
         }),
       };
     }
-    
+
     default:
       return state;
   }

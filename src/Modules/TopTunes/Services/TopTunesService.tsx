@@ -8,7 +8,7 @@ export default class TopTunesService {
     const http = new HttpClient();
 
     const res = await http.get(urls.api.getiTunes);
-  
+
     return this.mapiTunesDtoToModel(res.data.feed.entry);
   }
 
