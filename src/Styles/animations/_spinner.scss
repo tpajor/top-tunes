@@ -27,19 +27,19 @@
       .5em 0 0 rgba(0,0,0,0);
   }
   40% {
-    color: map-deep-get($palette, alternateText);
+    color: map-deep-get($palette, tertiary);
     text-shadow:
       .25em 0 0 rgba(0,0,0,0),
       .5em 0 0 rgba(0,0,0,0);
   }
   60% {
     text-shadow:
-      .25em 0 0 map-deep-get($palette, alternateText),
+      .25em 0 0 map-deep-get($palette, tertiary),
       .5em 0 0 rgba(0,0,0,0);
   }
   80%, 100% {
     text-shadow:
-      .25em 0 0 map-deep-get($palette, alternateText),
-      .5em 0 0 map-deep-get($palette, alternateText);
+      .25em 0 0 map-deep-get($palette, tertiary),
+      .5em 0 0 map-deep-get($palette, tertiary);
    }
 }

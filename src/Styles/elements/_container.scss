@@ -40,8 +40,8 @@
 
   &--form-control {
     position: relative;
-    height: map-deep-get($dimensions, height, inputs);
-    width: map-deep-get($dimensions, width, inputs);
+    height: map-deep-get($elements, form, inputs, height);
+    width: map-deep-get($elements, form, inputs, width);
     margin: map-deep-get($dimensions, margin, center);
     margin-bottom: map-deep-get($dimensions, margin, md);
   }
@@ -56,9 +56,9 @@
   }
 
   &--spinner-icon {
-    background-color: map-deep-get($palette, alternateText);
-    height: map-deep-get($dimensions, height, spinner);
-    width: map-deep-get($dimensions, width, spinner);
+    background-color: map-deep-get($palette, tertiary);
+    height: map-deep-get($elements, animations, spinner, height);
+    width: map-deep-get($elements, animations, spinner, width);
     margin-bottom: map-deep-get($dimensions, margin, sm);
   }
 
@@ -79,18 +79,18 @@
     position: fixed;
     top: 0;
     right: 0;
-    background-color: map-deep-get($palette, modalBackground);
+    background-color: map-deep-get($palette, dimmed);
     z-index: $modal;
     overflow-y: initial;
   }
 
   &--modal-main {
-    width: map-deep-get($dimensions, width, inReferenceToParent, modal);
-    max-width: map-deep-get($dimensions, width, modalMaxWidth);
-    height: map-deep-get($dimensions, height, inReferenceToParent, modal);
-    background-color: map-deep-get($palette, modalContentBackground);
+    width: map-deep-get($elements, modal, width);
+    max-width: map-deep-get($elements, modal, maxWidth);
+    height: map-deep-get($elements, modal, height);
+    background-color: map-deep-get($palette, backgroundAlternate);
     border-radius: map-deep-get($border, radius, standard);
-    box-shadow: map-deep-get($palette, modalShadow);
+    box-shadow: map-deep-get($border, shadows, shadow);
     position: relative;
     padding: map-deep-get($dimensions, padding, md) 0;
     overflow-y: auto;
@@ -106,7 +106,7 @@
     @include flexbox(row, center, center);
     margin: map-deep-get($dimensions, margin, center);
     width: map-deep-get($dimensions, width, inReferenceToParent, smaller);
-    box-shadow: map-deep-get($palette, modalHeaderShadow);
+    box-shadow: map-deep-get($border, shadows, shadowAlternate);
     padding: map-deep-get($dimensions, margin, xs);
     position: relative;
 
@@ -143,8 +143,8 @@
   &--modal-item {
     @include flexbox(column, space-between, space-between);
     padding: map-deep-get($dimensions, padding, md) map-deep-get($dimensions, padding, lg);
-    height: map-deep-get($dimensions, height, modalItem);
-    width: map-deep-get($dimensions, width, modalItem);
-    border-bottom: 2px solid map-deep-get($palette, modalBackground);
+    height: map-deep-get($elements, modal, item, height);
+    width: map-deep-get($elements, modal, item, width);
+    border-bottom: 2px solid map-deep-get($palette, dimmed);
   }
 }

@@ -2,7 +2,7 @@
   font-family: map-deep-get($typography, family, light);
   font-size: map-deep-get($typography, sizes, lg);
   line-height: map-deep-get($typography, lineHeights, lg);
-  color: map-deep-get($palette, alternateText);
+  color: map-deep-get($palette, tertiary);
 }
 
 .text {
@@ -14,7 +14,7 @@
     font-family: map-deep-get($typography, family, semibold);
     font-size: map-deep-get($typography, sizes, xlg);
     line-height: map-deep-get($typography, lineHeights, xlg);
-    color: map-deep-get($palette, titleText);
+    color: map-deep-get($palette, primary);
 
     @include mobile-screen {
       font-size: map-deep-get($typography, sizes, lg);
@@ -29,7 +29,7 @@
   &--list-item-title {
     font-size: map-deep-get($typography, sizes, sm);
     line-height: map-deep-get($typography, lineHeights, sm);
-    color: map-deep-get($palette, text);
+    color: map-deep-get($palette, secondary);
   }
 
   &--highlight {
@@ -37,7 +37,7 @@
     font-size: map-deep-get($typography, sizes, md);
     line-height: map-deep-get($typography, lineHeights, md);
     font-family: map-deep-get($typography, family, bold);
-    color: map-deep-get($palette, titleText);
+    color: map-deep-get($palette, primary);
   }
 
   &--info {
@@ -46,23 +46,23 @@
 
   &--error {
     @extend %list-shared;
-    color: map-deep-get($palette, warningText);
+    color: map-deep-get($palette, warning);
   }
 
   &--modal-item-title {
-    color: map-deep-get($palette, text);
+    color: map-deep-get($palette, secondary);
     text-align: left;
     font-size: map-deep-get($typography, sizes, lg);
   }
 
   &--modal-item-text {
-    color: map-deep-get($palette, alternateText);
+    color: map-deep-get($palette, tertiary);
     text-align: right;
     font-size: map-deep-get($typography, sizes, lg);
   }
 
   &--modal-item-rights {
-    color: map-deep-get($palette, alternateText);
+    color: map-deep-get($palette, tertiary);
     text-align: right;
     font-size: map-deep-get($typography, sizes, sm);
   }

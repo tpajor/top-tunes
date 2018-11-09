@@ -5,15 +5,15 @@
   height: map-deep-get($dimensions, width, inReferenceToParent, match);
   width: map-deep-get($dimensions, width, inReferenceToParent, match);
   border-radius: map-deep-get($border, radius, standard);
-  border: map-deep-get($border, inputs);
+  border: map-deep-get($border, primary);
   font-size: map-deep-get($typography, sizes, md);
-  color: map-deep-get($palette, text);
-  -webkit-text-fill-color: map-deep-get($palette, text);
-  padding: map-deep-get($dimensions, padding, inputs);
+  color: map-deep-get($palette, secondary);
+  -webkit-text-fill-color: map-deep-get($palette, secondary);
+  padding: map-deep-get($elements, form, inputs, padding);
 
   &::placeholder {
-    color: map-deep-get($palette, placeholderText);
-    -webkit-text-fill-color: map-deep-get($palette, placeholderText);
+    color: map-deep-get($palette, placeholder);
+    -webkit-text-fill-color: map-deep-get($palette, placeholder);
   }
 
   &--search {

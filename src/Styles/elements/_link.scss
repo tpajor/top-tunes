@@ -17,23 +17,23 @@
 
   &--list-item-odd {
     @extend %list-item;
-    background-color: map-deep-get($palette, listItemBackgroundAlternate);
-    box-shadow: map-deep-get($palette, listItemShadowAlternate);
+    background-color: map-deep-get($palette, backgroundOdd);
+    box-shadow: map-deep-get($border, shadows, shadowOdd);
   }
 
   &--list-item-even {
     @extend %list-item;
-    background-color: map-deep-get($palette, listItemBackground);
-    box-shadow: map-deep-get($palette, listItemShadow);
+    background-color: map-deep-get($palette, backgroundEven);
+    box-shadow: map-deep-get($border, shadows, shadowEven);
   }
 
   &--close {
     position: absolute;
     top: 5px;
     right: 10px;
-    color: map-deep-get($palette, text);
+    color: map-deep-get($palette, secondary);
     font-size: map-deep-get($typography, sizes, md);
-    text-shadow: map-deep-get($palette, textShadow);
+    text-shadow: map-deep-get($border, shadows, shadowIntense);
 
     @include mobile-screen {
       display: none;

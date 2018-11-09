@@ -3,24 +3,19 @@
 
 $palette: (
   background:#F6F6F6,
-  listItemBackground: rgba(226, 226, 226, 1),
-  listItemBackgroundAlternate: rgba(226, 226, 226, 0.5),
-  inputBackground: white,
-  modalBackground: rgba(208, 208, 208, 0.6),
-  modalContentBackground: white,
+  backgroundAlternate: white,
+  backgroundOdd: rgba(226, 226, 226, 1),
+  backgroundEven: rgba(226, 226, 226, 0.5),
+
+  primary: #0097D9,
+  secondary: #36363A,
+  tertiary: #B2B2BF,
+
+  placeholder: #7C7C95,
+  warning: #E56257,
+
+  dimmed: rgba(208, 208, 208, 0.6),
   hidden: rgba(255, 255, 255, 0),
-
-  titleText: #0097D9,
-  text: #36363A,
-  alternateText: #B2B2BF,
-  warningText: #E56257,
-  placeholderText: #7C7C95,
-
-  listItemShadow: 2px 2px 6px rgba(0, 0, 0, 0.24),
-  listItemShadowAlternate: 2px 2px 6px rgba(0, 0, 0, 0.16),
-  modalShadow: 5px 3px 15px rgba(0, 0, 0, 0.07),
-  textShadow: .5px .5px rgba(0, 0, 0, .7),
-  modalHeaderShadow: 0 5px 10px rgba(0, 0, 0, 0.5),
 );
 
 $typography: (
@@ -49,12 +44,15 @@ $typography: (
 $dimensions: (
   margin: (
     center: 0 auto,
+
     xs: 10px,
     sm: 15px,
     md: 30px,
     lg: 40px,
     xlg: 150px,
+
     relativeSm: 7.5%,
+
     negativeSm: -15px,
   ),
 
@@ -64,35 +62,24 @@ $dimensions: (
     md: 30px,
     lg: 50px,
     xlg: 150px,
-    inputs: 0 30px 0 20px,
   ),
 
   width: (
     maxWidth: $max-content-width,
-    modalMaxWidth: 861px,
-    inputs: 275px,
-    spinner: 50px,
-    imageCover: 100px,
     matchViewport: 100vw,
-    modalItem: 300px,
 
     inReferenceToParent: (
       half: 50%,
-      modal: 75%,
       smaller: 80%,
       match: 100%,
     ),
   ),
 
   height: (
-    inputs: 40px,
-    spinner: 50px,
     matchViewport: 100vh,
-    modalItem: 140px,
 
     inReferenceToParent: (
       half: 50%,
-      modal: 75%,
       smaller: 80%,
       match: 100%,
     ),
@@ -105,5 +92,46 @@ $border: (
     circle: 50%,
   ),
 
-  inputs: 1px solid #d2d2d2,
+  shadows: (
+    shadow: 5px 3px 15px rgba(0, 0, 0, 0.07),
+    shadowAlternate: 0 5px 10px rgba(0, 0, 0, 0.5),
+    shadowIntense: 0.5px 0.5px rgba(0, 0, 0, 0.7),
+    shadowOdd: 2px 2px 6px rgba(0, 0, 0, 0.24),
+    shadowEven: 2px 2px 6px rgba(0, 0, 0, 0.16),
+  ),
+
+  primary: 1px solid #d2d2d2,
 );
+
+$elements: (
+  modal: (
+    maxWidth: 861px,
+    width: 75%,
+    height: 75%,
+
+    item: (
+      width: 300px,
+      height: 140px,
+
+      image: (
+        width: 100px,
+      ),
+    ),
+  ),
+
+  form: (
+    inputs: (
+      padding: 0 30px 0 20px,
+      width: 275px,
+      height: 40px,
+    ),
+  ),
+
+  animations: (
+    spinner: (
+      width: 50px,
+      height: 50px,
+    ),
+  ),
+);
+
