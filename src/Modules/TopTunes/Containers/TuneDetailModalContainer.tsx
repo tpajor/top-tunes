@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
 
 import { IRootState } from '../../../Store/rootReducer';
-import TuneDetailModal from '../Components/TuneDetailModal';
 import { IProps } from '../Components/TuneDetailModal';
 import { match } from 'react-router';
 import { params } from '../../../Routing/urls';
+import TuneDetailModalLoadble from '../Lazy/TuneDetailModalLoadble';
 
 interface IRouteParams {
   [kay: string]: string;
@@ -20,4 +20,4 @@ const mapStateToProps = (state: IRootState, ownProps: IOwnProps) => {
   });
 };
 
-export default connect(mapStateToProps)(TuneDetailModal);
+export default connect(mapStateToProps)(TuneDetailModalLoadble);
