@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Subject } from 'rxjs';
+import { Subject, Subscription } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 import { Route } from 'react-router-dom';
 import { LocationDescriptor } from 'history';
@@ -32,13 +32,21 @@ class TopTunesList extends React.PureComponent<IProps, IState> {
     termChange$: new Subject<string>(),
   };
 
+  private subscriptions: Subscription[] = [];
+
   componentDidMount() {
     this.props.getiTunesStart();
 
-    this.state.termChange$.pipe(
+    this.subscriptions.push(this.state.termChange$.pipe(
       debounceTime(500),
     ).subscribe((searchTerm: string) => {
       this.props.filteriTunes(searchTerm.toLowerCase().trim());
+    }));
+  }
+
+  componentWillUnmount() {
+    this.subscriptions.forEach((subscription: Subscription) => {
+      subscription.unsubscribe();
     });
   }
 

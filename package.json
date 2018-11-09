@@ -20,7 +20,8 @@
       "src/**/*.{js,jsx,ts,tsx}",
       "!src/index.tsx",
       "!src/serviceWorker.ts",
-      "!react-app-env.d.ts"
+      "!react-app-env.d.ts",
+      "!src/setupTest.js"
     ]
   },
   "dependencies": {

@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
+import { Subject, Subscription } from 'rxjs';
+
 import TopTunesList, { IProps, IState } from './TopTunesList';
 import { iTunes } from '../../../Shared/Interfaces/__mocks__/ITuneMocks';
-import { Subject } from 'rxjs';
 
 const initialState: IState = {
   termChange$: new Subject<string>(),
@@ -111,5 +112,16 @@ describe('App component', () => {
 
     wrapper.setProps({ ...props, error: 'error' });
     expect(wrapper.find('Route').length).toBe(0);
+  });
+
+  it('should unsubscribe from all subscription on component will unmount lifecycle hooks', () => {
+    const { wrapper } = setup();
+    const instance = wrapper.instance();
+
+    spyOn(Subscription.prototype, 'unsubscribe');
+
+    instance.componentWillUnmount!();
+
+    expect(Subscription.prototype.unsubscribe).toHaveBeenCalled();
   });
 });
