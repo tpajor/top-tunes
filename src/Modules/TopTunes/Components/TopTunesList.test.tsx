@@ -48,12 +48,14 @@ describe('App component', () => {
 
     (wrapper.state('termChange$') as Subject<string>).next(term);
 
-    setTimeout(
+    setInterval(
       () => {
-        expect(props.filteriTunes).toHaveBeenCalledWith(term);
-        done();
+        if ((props.filteriTunes as jest.Mock).mock.calls.length > 0) {
+          expect(props.filteriTunes).toHaveBeenCalledWith(term);
+          done();
+        }
       },
-      2000
+      500,
     );
   });
 
@@ -94,5 +96,20 @@ describe('App component', () => {
     expect(wrapper.find('Error').length).toBe(0);
     expect(wrapper.find('NoResults').length).toBe(0);
     expect(wrapper.find('TopTunesListItem').length).toBe(props.filteredIds.length);
+  });
+
+  it('should render nested Route if everything is in order and propers route was called', () => {
+    const { wrapper, props } = setup();
+
+    expect(wrapper.find('Route').length).toBe(1);
+
+    wrapper.setProps({ ...props, filteredIds: [] });
+    expect(wrapper.find('Route').length).toBe(0);
+
+    wrapper.setProps({ ...props, isLoading: true });
+    expect(wrapper.find('Route').length).toBe(0);
+
+    wrapper.setProps({ ...props, error: 'error' });
+    expect(wrapper.find('Route').length).toBe(0);
   });
 });
