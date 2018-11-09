@@ -13,11 +13,11 @@ import TuneDetailModalContainer from '../Containers/TuneDetailModalContainer';
 import NoResults from '../../../Shared/Components/NoResults';
 import Error from '../../../Shared/Components/Error';
 
-interface IState {
+export interface IState {
   termChange$: Subject<string>;
 }
 
-interface IProps {
+export interface IProps {
   filteredIds: number[];
   byIds: { [key: string]: IITune };
   isLoading: boolean;
