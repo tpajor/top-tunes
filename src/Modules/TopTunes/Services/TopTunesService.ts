@@ -12,7 +12,7 @@ export default class TopTunesService {
     return this.mapiTunesDtoToModel(res.data.feed.entry);
   }
 
-  private mapiTunesDtoToModel(dto: IDtoiTune[]): IITune[] {
+  public mapiTunesDtoToModel(dto: IDtoiTune[]): IITune[] {
     return dto.map((iTuneDto: IDtoiTune) => {
       return ({
         category: iTuneDto.category.attributes.term,

@@ -2,9 +2,10 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 
 import { urls } from '../../../Routing/urls';
+import IITune from '../../../Shared/Interfaces/models/IITune';
 
-interface IProps {
-  item: any;
+export interface IProps {
+  item: IITune;
   position: number;
   iteration: number;
 }

@@ -14,13 +14,13 @@ export interface ITopTunesUIState {
   error: string;
 }
 
-const initialDataState: ITopTunesDataState = {
+export const initialDataState: ITopTunesDataState = {
   allIds: [],
   filteredIds: [],
   byIds: {},
 };
 
-const initialUIState: ITopTunesUIState = {
+export const initialUIState: ITopTunesUIState = {
   isLoading: false,
   error: '',
 };

@@ -3,9 +3,10 @@ import { LocationDescriptor } from 'history';
 
 import TopTunesListContainer from '../Containers/TopTunesListContainer';
 
-interface IProps {
+export interface IProps {
   location: LocationDescriptor;
 }
+
 class TopTunesMainView extends React.PureComponent<IProps> {
   public render() {
     return (

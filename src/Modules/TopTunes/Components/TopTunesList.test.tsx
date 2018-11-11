@@ -2,7 +2,7 @@ import * as React from 'react';
 import { shallow } from 'enzyme';
 import { Subject, Subscription } from 'rxjs';
 
-import TopTunesList, { IProps, IState } from './TopTunesList';
+import TopTunesList, { IProps } from './TopTunesList';
 import { iTunes } from '../../../Shared/Interfaces/__mocks__/ITuneMocks';
 
 function setup() {
@@ -28,7 +28,7 @@ function setup() {
   };
 }
 
-describe('App component', () => {
+describe('TopTunesList component', () => {
   it('should match snapshot if no change was intended', () => {
     const { wrapper } = setup();
 

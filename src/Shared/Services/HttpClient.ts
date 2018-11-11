@@ -6,7 +6,7 @@ export default class HttpClient {
   }
 
   post(url: string, payload: any): AxiosPromise<any> {
-    return axios.put(url, payload);
+    return axios.post(url, payload);
   }
 
   put(url: string, payload: any): AxiosPromise<any> {

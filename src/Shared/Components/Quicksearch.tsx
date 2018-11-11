@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Subject } from 'rxjs';
 
-interface IProps {
+export interface IProps {
   term$: Subject<string>;
 }
 

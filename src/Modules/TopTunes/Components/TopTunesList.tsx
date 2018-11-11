@@ -81,7 +81,7 @@ class TopTunesList extends React.PureComponent<IProps, IState> {
     ));
   }
 
-  renderTuneDetailRoute = () => {
+  private readonly renderTuneDetailRoute = () => {
     if (this.props.isLoading || this.props.error !== '' || this.props.filteredIds.length === 0) {
       return null;
     } else {

@@ -39,6 +39,19 @@ const iTune3: IITune = {
   title: 'Lazy Artist Name - Yet Another Album',
 };
 
+export const fromDto: IITune = {
+  category: 'category term',
+  artist: 'artist',
+  photo: 'http://image.com',
+  numberOfSongs: 13,
+  name: 'name',
+  price: '$13.13',
+  releaseDate: new Date('1999-09-09'),
+  link: 'http://link.com',
+  rights: 'rights',
+  title: 'title',
+};
+
 export const iTunes: IITune[] = [
   iTune1,
   iTune2,
