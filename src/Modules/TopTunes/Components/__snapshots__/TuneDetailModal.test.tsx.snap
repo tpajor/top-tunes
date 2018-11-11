@@ -1,0 +1,1375 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TuneDetailModal component should match snapshot if no change was intended 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <TuneDetailModal
+    history={
+      Object {
+        "push": [MockFunction],
+      }
+    }
+    tune={
+      Object {
+        "artist": "Various",
+        "category": "Jazz",
+        "link": "http://profile-url.com",
+        "name": "Some Album",
+        "numberOfSongs": 14,
+        "photo": "http://photo-url.com",
+        "price": "$6.67",
+        "releaseDate": 1902-03-02T00:38:02.002Z,
+        "rights": "copyleft",
+        "title": "Various - Some Album",
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="container container--modal-main"
+      >
+        <div
+          className="container"
+        >
+          <Link
+            className="link link--close"
+            onClick={[Function]}
+            replace={false}
+            to="/topTunes"
+          >
+            X
+          </Link>
+          <header
+            className="container container--modal-header"
+          >
+            <div
+              className="link link--back"
+              onClick={[Function]}
+            />
+            <h1
+              className="text text--title"
+            >
+              Various - 
+              <span
+                className="text text--title-secondary"
+              >
+                Some Album
+              </span>
+            </h1>
+            <div
+              className="container container--modal-header-overlay"
+              onClick={[Function]}
+            />
+          </header>
+          <section
+            className="container container--modal-section"
+          >
+            <div
+              className="container container--modal-item"
+            >
+              <img
+                alt="cover"
+                className="image image--cover"
+                src="http://photo-url.com"
+              />
+            </div>
+            <div
+              className="container container--modal-item"
+            >
+              <h2
+                className="text text--modal-item-title"
+              >
+                Visit profile
+              </h2>
+              <a
+                className="link link--visitiTunes"
+                href="http://profile-url.com"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <p
+                  className="text text--modal-item-text"
+                >
+                  iTune
+                </p>
+                <div
+                  className="container container--go-to-icon"
+                />
+              </a>
+            </div>
+            <TuneDetailTextItem
+              text="Jazz"
+              title="Category"
+            />
+            <TuneDetailTextItem
+              text={14}
+              title="Number of tracks"
+            />
+            <TuneDetailTextItem
+              text="1902-02-02"
+              title="Released"
+            />
+            <TuneDetailTextItem
+              text="$6.67"
+              title="Price"
+            />
+            <TuneDetailTextItem
+              text="copyleft"
+              title="Producer"
+            />
+          </section>
+        </div>
+      </div>,
+      "className": "container container--modal-background slide-in",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="container"
+        >
+          <Link
+            className="link link--close"
+            onClick={[Function]}
+            replace={false}
+            to="/topTunes"
+          >
+            X
+          </Link>
+          <header
+            className="container container--modal-header"
+          >
+            <div
+              className="link link--back"
+              onClick={[Function]}
+            />
+            <h1
+              className="text text--title"
+            >
+              Various - 
+              <span
+                className="text text--title-secondary"
+              >
+                Some Album
+              </span>
+            </h1>
+            <div
+              className="container container--modal-header-overlay"
+              onClick={[Function]}
+            />
+          </header>
+          <section
+            className="container container--modal-section"
+          >
+            <div
+              className="container container--modal-item"
+            >
+              <img
+                alt="cover"
+                className="image image--cover"
+                src="http://photo-url.com"
+              />
+            </div>
+            <div
+              className="container container--modal-item"
+            >
+              <h2
+                className="text text--modal-item-title"
+              >
+                Visit profile
+              </h2>
+              <a
+                className="link link--visitiTunes"
+                href="http://profile-url.com"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <p
+                  className="text text--modal-item-text"
+                >
+                  iTune
+                </p>
+                <div
+                  className="container container--go-to-icon"
+                />
+              </a>
+            </div>
+            <TuneDetailTextItem
+              text="Jazz"
+              title="Category"
+            />
+            <TuneDetailTextItem
+              text={14}
+              title="Number of tracks"
+            />
+            <TuneDetailTextItem
+              text="1902-02-02"
+              title="Released"
+            />
+            <TuneDetailTextItem
+              text="$6.67"
+              title="Price"
+            />
+            <TuneDetailTextItem
+              text="copyleft"
+              title="Producer"
+            />
+          </section>
+        </div>,
+        "className": "container container--modal-main",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Link
+              className="link link--close"
+              onClick={[Function]}
+              replace={false}
+              to="/topTunes"
+            >
+              X
+            </Link>,
+            <header
+              className="container container--modal-header"
+            >
+              <div
+                className="link link--back"
+                onClick={[Function]}
+              />
+              <h1
+                className="text text--title"
+              >
+                Various - 
+                <span
+                  className="text text--title-secondary"
+                >
+                  Some Album
+                </span>
+              </h1>
+              <div
+                className="container container--modal-header-overlay"
+                onClick={[Function]}
+              />
+            </header>,
+            <section
+              className="container container--modal-section"
+            >
+              <div
+                className="container container--modal-item"
+              >
+                <img
+                  alt="cover"
+                  className="image image--cover"
+                  src="http://photo-url.com"
+                />
+              </div>
+              <div
+                className="container container--modal-item"
+              >
+                <h2
+                  className="text text--modal-item-title"
+                >
+                  Visit profile
+                </h2>
+                <a
+                  className="link link--visitiTunes"
+                  href="http://profile-url.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <p
+                    className="text text--modal-item-text"
+                  >
+                    iTune
+                  </p>
+                  <div
+                    className="container container--go-to-icon"
+                  />
+                </a>
+              </div>
+              <TuneDetailTextItem
+                text="Jazz"
+                title="Category"
+              />
+              <TuneDetailTextItem
+                text={14}
+                title="Number of tracks"
+              />
+              <TuneDetailTextItem
+                text="1902-02-02"
+                title="Released"
+              />
+              <TuneDetailTextItem
+                text="$6.67"
+                title="Price"
+              />
+              <TuneDetailTextItem
+                text="copyleft"
+                title="Producer"
+              />
+            </section>,
+          ],
+          "className": "container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "X",
+              "className": "link link--close",
+              "onClick": [Function],
+              "replace": false,
+              "to": "/topTunes",
+            },
+            "ref": null,
+            "rendered": "X",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="link link--back"
+                  onClick={[Function]}
+                />,
+                <h1
+                  className="text text--title"
+                >
+                  Various - 
+                  <span
+                    className="text text--title-secondary"
+                  >
+                    Some Album
+                  </span>
+                </h1>,
+                <div
+                  className="container container--modal-header-overlay"
+                  onClick={[Function]}
+                />,
+              ],
+              "className": "container container--modal-header",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "link link--back",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Various - ",
+                    <span
+                      className="text text--title-secondary"
+                    >
+                      Some Album
+                    </span>,
+                  ],
+                  "className": "text text--title",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Various - ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Some Album",
+                      "className": "text text--title-secondary",
+                    },
+                    "ref": null,
+                    "rendered": "Some Album",
+                    "type": "span",
+                  },
+                ],
+                "type": "h1",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "container container--modal-header-overlay",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+            ],
+            "type": "header",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="container container--modal-item"
+                >
+                  <img
+                    alt="cover"
+                    className="image image--cover"
+                    src="http://photo-url.com"
+                  />
+                </div>,
+                <div
+                  className="container container--modal-item"
+                >
+                  <h2
+                    className="text text--modal-item-title"
+                  >
+                    Visit profile
+                  </h2>
+                  <a
+                    className="link link--visitiTunes"
+                    href="http://profile-url.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <p
+                      className="text text--modal-item-text"
+                    >
+                      iTune
+                    </p>
+                    <div
+                      className="container container--go-to-icon"
+                    />
+                  </a>
+                </div>,
+                <TuneDetailTextItem
+                  text="Jazz"
+                  title="Category"
+                />,
+                <TuneDetailTextItem
+                  text={14}
+                  title="Number of tracks"
+                />,
+                <TuneDetailTextItem
+                  text="1902-02-02"
+                  title="Released"
+                />,
+                <TuneDetailTextItem
+                  text="$6.67"
+                  title="Price"
+                />,
+                <TuneDetailTextItem
+                  text="copyleft"
+                  title="Producer"
+                />,
+              ],
+              "className": "container container--modal-section",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <img
+                    alt="cover"
+                    className="image image--cover"
+                    src="http://photo-url.com"
+                  />,
+                  "className": "container container--modal-item",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "cover",
+                    "className": "image image--cover",
+                    "src": "http://photo-url.com",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <h2
+                      className="text text--modal-item-title"
+                    >
+                      Visit profile
+                    </h2>,
+                    <a
+                      className="link link--visitiTunes"
+                      href="http://profile-url.com"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <p
+                        className="text text--modal-item-text"
+                      >
+                        iTune
+                      </p>
+                      <div
+                        className="container container--go-to-icon"
+                      />
+                    </a>,
+                  ],
+                  "className": "container container--modal-item",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Visit profile",
+                      "className": "text text--modal-item-title",
+                    },
+                    "ref": null,
+                    "rendered": "Visit profile",
+                    "type": "h2",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <p
+                          className="text text--modal-item-text"
+                        >
+                          iTune
+                        </p>,
+                        <div
+                          className="container container--go-to-icon"
+                        />,
+                      ],
+                      "className": "link link--visitiTunes",
+                      "href": "http://profile-url.com",
+                      "rel": "noopener noreferrer",
+                      "target": "_blank",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "iTune",
+                          "className": "text text--modal-item-text",
+                        },
+                        "ref": null,
+                        "rendered": "iTune",
+                        "type": "p",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "className": "container container--go-to-icon",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "div",
+                      },
+                    ],
+                    "type": "a",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "text": "Jazz",
+                  "title": "Category",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "text": 14,
+                  "title": "Number of tracks",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "text": "1902-02-02",
+                  "title": "Released",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "text": "$6.67",
+                  "title": "Price",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "text": "copyleft",
+                  "title": "Producer",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "section",
+          },
+        ],
+        "type": "div",
+      },
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="container container--modal-main"
+        >
+          <div
+            className="container"
+          >
+            <Link
+              className="link link--close"
+              onClick={[Function]}
+              replace={false}
+              to="/topTunes"
+            >
+              X
+            </Link>
+            <header
+              className="container container--modal-header"
+            >
+              <div
+                className="link link--back"
+                onClick={[Function]}
+              />
+              <h1
+                className="text text--title"
+              >
+                Various - 
+                <span
+                  className="text text--title-secondary"
+                >
+                  Some Album
+                </span>
+              </h1>
+              <div
+                className="container container--modal-header-overlay"
+                onClick={[Function]}
+              />
+            </header>
+            <section
+              className="container container--modal-section"
+            >
+              <div
+                className="container container--modal-item"
+              >
+                <img
+                  alt="cover"
+                  className="image image--cover"
+                  src="http://photo-url.com"
+                />
+              </div>
+              <div
+                className="container container--modal-item"
+              >
+                <h2
+                  className="text text--modal-item-title"
+                >
+                  Visit profile
+                </h2>
+                <a
+                  className="link link--visitiTunes"
+                  href="http://profile-url.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <p
+                    className="text text--modal-item-text"
+                  >
+                    iTune
+                  </p>
+                  <div
+                    className="container container--go-to-icon"
+                  />
+                </a>
+              </div>
+              <TuneDetailTextItem
+                text="Jazz"
+                title="Category"
+              />
+              <TuneDetailTextItem
+                text={14}
+                title="Number of tracks"
+              />
+              <TuneDetailTextItem
+                text="1902-02-02"
+                title="Released"
+              />
+              <TuneDetailTextItem
+                text="$6.67"
+                title="Price"
+              />
+              <TuneDetailTextItem
+                text="copyleft"
+                title="Producer"
+              />
+            </section>
+          </div>
+        </div>,
+        "className": "container container--modal-background slide-in",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="container"
+          >
+            <Link
+              className="link link--close"
+              onClick={[Function]}
+              replace={false}
+              to="/topTunes"
+            >
+              X
+            </Link>
+            <header
+              className="container container--modal-header"
+            >
+              <div
+                className="link link--back"
+                onClick={[Function]}
+              />
+              <h1
+                className="text text--title"
+              >
+                Various - 
+                <span
+                  className="text text--title-secondary"
+                >
+                  Some Album
+                </span>
+              </h1>
+              <div
+                className="container container--modal-header-overlay"
+                onClick={[Function]}
+              />
+            </header>
+            <section
+              className="container container--modal-section"
+            >
+              <div
+                className="container container--modal-item"
+              >
+                <img
+                  alt="cover"
+                  className="image image--cover"
+                  src="http://photo-url.com"
+                />
+              </div>
+              <div
+                className="container container--modal-item"
+              >
+                <h2
+                  className="text text--modal-item-title"
+                >
+                  Visit profile
+                </h2>
+                <a
+                  className="link link--visitiTunes"
+                  href="http://profile-url.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <p
+                    className="text text--modal-item-text"
+                  >
+                    iTune
+                  </p>
+                  <div
+                    className="container container--go-to-icon"
+                  />
+                </a>
+              </div>
+              <TuneDetailTextItem
+                text="Jazz"
+                title="Category"
+              />
+              <TuneDetailTextItem
+                text={14}
+                title="Number of tracks"
+              />
+              <TuneDetailTextItem
+                text="1902-02-02"
+                title="Released"
+              />
+              <TuneDetailTextItem
+                text="$6.67"
+                title="Price"
+              />
+              <TuneDetailTextItem
+                text="copyleft"
+                title="Producer"
+              />
+            </section>
+          </div>,
+          "className": "container container--modal-main",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Link
+                className="link link--close"
+                onClick={[Function]}
+                replace={false}
+                to="/topTunes"
+              >
+                X
+              </Link>,
+              <header
+                className="container container--modal-header"
+              >
+                <div
+                  className="link link--back"
+                  onClick={[Function]}
+                />
+                <h1
+                  className="text text--title"
+                >
+                  Various - 
+                  <span
+                    className="text text--title-secondary"
+                  >
+                    Some Album
+                  </span>
+                </h1>
+                <div
+                  className="container container--modal-header-overlay"
+                  onClick={[Function]}
+                />
+              </header>,
+              <section
+                className="container container--modal-section"
+              >
+                <div
+                  className="container container--modal-item"
+                >
+                  <img
+                    alt="cover"
+                    className="image image--cover"
+                    src="http://photo-url.com"
+                  />
+                </div>
+                <div
+                  className="container container--modal-item"
+                >
+                  <h2
+                    className="text text--modal-item-title"
+                  >
+                    Visit profile
+                  </h2>
+                  <a
+                    className="link link--visitiTunes"
+                    href="http://profile-url.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <p
+                      className="text text--modal-item-text"
+                    >
+                      iTune
+                    </p>
+                    <div
+                      className="container container--go-to-icon"
+                    />
+                  </a>
+                </div>
+                <TuneDetailTextItem
+                  text="Jazz"
+                  title="Category"
+                />
+                <TuneDetailTextItem
+                  text={14}
+                  title="Number of tracks"
+                />
+                <TuneDetailTextItem
+                  text="1902-02-02"
+                  title="Released"
+                />
+                <TuneDetailTextItem
+                  text="$6.67"
+                  title="Price"
+                />
+                <TuneDetailTextItem
+                  text="copyleft"
+                  title="Producer"
+                />
+              </section>,
+            ],
+            "className": "container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "X",
+                "className": "link link--close",
+                "onClick": [Function],
+                "replace": false,
+                "to": "/topTunes",
+              },
+              "ref": null,
+              "rendered": "X",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="link link--back"
+                    onClick={[Function]}
+                  />,
+                  <h1
+                    className="text text--title"
+                  >
+                    Various - 
+                    <span
+                      className="text text--title-secondary"
+                    >
+                      Some Album
+                    </span>
+                  </h1>,
+                  <div
+                    className="container container--modal-header-overlay"
+                    onClick={[Function]}
+                  />,
+                ],
+                "className": "container container--modal-header",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "link link--back",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Various - ",
+                      <span
+                        className="text text--title-secondary"
+                      >
+                        Some Album
+                      </span>,
+                    ],
+                    "className": "text text--title",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Various - ",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Some Album",
+                        "className": "text text--title-secondary",
+                      },
+                      "ref": null,
+                      "rendered": "Some Album",
+                      "type": "span",
+                    },
+                  ],
+                  "type": "h1",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "container container--modal-header-overlay",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "div",
+                },
+              ],
+              "type": "header",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="container container--modal-item"
+                  >
+                    <img
+                      alt="cover"
+                      className="image image--cover"
+                      src="http://photo-url.com"
+                    />
+                  </div>,
+                  <div
+                    className="container container--modal-item"
+                  >
+                    <h2
+                      className="text text--modal-item-title"
+                    >
+                      Visit profile
+                    </h2>
+                    <a
+                      className="link link--visitiTunes"
+                      href="http://profile-url.com"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <p
+                        className="text text--modal-item-text"
+                      >
+                        iTune
+                      </p>
+                      <div
+                        className="container container--go-to-icon"
+                      />
+                    </a>
+                  </div>,
+                  <TuneDetailTextItem
+                    text="Jazz"
+                    title="Category"
+                  />,
+                  <TuneDetailTextItem
+                    text={14}
+                    title="Number of tracks"
+                  />,
+                  <TuneDetailTextItem
+                    text="1902-02-02"
+                    title="Released"
+                  />,
+                  <TuneDetailTextItem
+                    text="$6.67"
+                    title="Price"
+                  />,
+                  <TuneDetailTextItem
+                    text="copyleft"
+                    title="Producer"
+                  />,
+                ],
+                "className": "container container--modal-section",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <img
+                      alt="cover"
+                      className="image image--cover"
+                      src="http://photo-url.com"
+                    />,
+                    "className": "container container--modal-item",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "cover",
+                      "className": "image image--cover",
+                      "src": "http://photo-url.com",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <h2
+                        className="text text--modal-item-title"
+                      >
+                        Visit profile
+                      </h2>,
+                      <a
+                        className="link link--visitiTunes"
+                        href="http://profile-url.com"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        <p
+                          className="text text--modal-item-text"
+                        >
+                          iTune
+                        </p>
+                        <div
+                          className="container container--go-to-icon"
+                        />
+                      </a>,
+                    ],
+                    "className": "container container--modal-item",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Visit profile",
+                        "className": "text text--modal-item-title",
+                      },
+                      "ref": null,
+                      "rendered": "Visit profile",
+                      "type": "h2",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <p
+                            className="text text--modal-item-text"
+                          >
+                            iTune
+                          </p>,
+                          <div
+                            className="container container--go-to-icon"
+                          />,
+                        ],
+                        "className": "link link--visitiTunes",
+                        "href": "http://profile-url.com",
+                        "rel": "noopener noreferrer",
+                        "target": "_blank",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "iTune",
+                            "className": "text text--modal-item-text",
+                          },
+                          "ref": null,
+                          "rendered": "iTune",
+                          "type": "p",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "className": "container container--go-to-icon",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "div",
+                        },
+                      ],
+                      "type": "a",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "text": "Jazz",
+                    "title": "Category",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "text": 14,
+                    "title": "Number of tracks",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "text": "1902-02-02",
+                    "title": "Released",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "text": "$6.67",
+                    "title": "Price",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "text": "copyleft",
+                    "title": "Producer",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "section",
+            },
+          ],
+          "type": "div",
+        },
+        "type": "div",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

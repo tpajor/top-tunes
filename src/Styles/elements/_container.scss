@@ -1,0 +1,150 @@
+@import '../theme';
+@import '../functions/deep-get';
+@import '../variables/dimensions';
+@import '../mixins/flexbox';
+@import '../mixins/icon';
+@import '../mixins/responsiveness';
+
+.container {
+  box-sizing: border-box;
+  width: map-deep-get($dimensions, width, inReferenceToParent, match);
+
+  &--main {
+    margin: map-deep-get($dimensions, margin, center);
+    max-width: map-deep-get($dimensions, width, maxWidth);
+  }
+  
+  &--page {
+    padding: map-deep-get($dimensions, padding, lg) 0;
+    text-align: center;
+  }
+
+  &--list {
+    margin-top: map-deep-get($dimensions, margin, lg);
+  }
+
+  &--list-info {
+    @include flexbox(column, center, center);
+    height: $list-height;
+    width: map-deep-get($dimensions, width, inReferenceToParent, smaller);
+    margin: map-deep-get($dimensions, margin, center);
+    padding-bottom: map-deep-get($dimensions, padding, xlg);
+  }
+
+  &--info {
+    @include flexbox(column, center, center);
+    height: map-deep-get($dimensions, height, inReferenceToParent, match);
+    width: map-deep-get($dimensions, width, inReferenceToParent, match);
+    position: relative;
+  }
+
+  &--form-control {
+    position: relative;
+    height: map-deep-get($elements, form, inputs, height);
+    width: map-deep-get($elements, form, inputs, width);
+    margin: map-deep-get($dimensions, margin, center);
+    margin-bottom: map-deep-get($dimensions, margin, md);
+  }
+
+//
+// Icons - icons' containers
+//
+
+  &--icon-truck {
+    @include icon($url: url('Shared/Assets/icons/ICON_Ice_truck.svg'), $height: 150px, $width: 150px, $background: inherit);
+    margin-top: map-deep-get($dimensions, margin, xlg);
+  }
+
+  &--spinner-icon {
+    background-color: map-deep-get($palette, tertiary);
+    height: map-deep-get($elements, animations, spinner, height);
+    width: map-deep-get($elements, animations, spinner, width);
+    margin-bottom: map-deep-get($dimensions, margin, sm);
+  }
+
+  &--go-to-icon {
+    @include icon($url: url('Shared/Assets/icons/ICON-Eye.svg'));
+    position: initial;
+    margin-left: map-deep-get($dimensions, margin, xs);
+  }
+
+//
+// MODAL - modal containers
+//
+
+  &--modal-background {
+    @include flexbox(row, center, center);
+    width: map-deep-get($dimensions, width, matchViewport);
+    height: map-deep-get($dimensions, height, matchViewport);
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: map-deep-get($palette, dimmed);
+    z-index: $modal;
+    overflow-y: initial;
+  }
+
+  &--modal-main {
+    width: map-deep-get($elements, modal, width);
+    max-width: map-deep-get($elements, modal, maxWidth);
+    height: map-deep-get($elements, modal, height);
+    background-color: map-deep-get($palette, backgroundAlternate);
+    border-radius: map-deep-get($border, radius, standard);
+    box-shadow: map-deep-get($border, shadows, shadow);
+    position: relative;
+    padding: map-deep-get($dimensions, padding, md) 0;
+    overflow-y: auto;
+
+    @include mobile-screen {
+      width: map-deep-get($dimensions, width, matchViewport);
+      max-width: map-deep-get($dimensions, width, matchViewport);
+      height: map-deep-get($dimensions, height, matchViewport);
+    }
+  }
+
+  &--modal-header {
+    @include flexbox(row, center, center);
+    margin: map-deep-get($dimensions, margin, center);
+    width: map-deep-get($dimensions, width, inReferenceToParent, smaller);
+    box-shadow: map-deep-get($border, shadows, shadowAlternate);
+    padding: map-deep-get($dimensions, margin, xs);
+    position: relative;
+
+    @include mobile-screen {
+      @include flexbox(column, center, center);
+      padding: map-deep-get($dimensions, margin, md) map-deep-get($dimensions, margin, xs);
+    }
+  }
+
+  &--modal-header-overlay {
+    width: map-deep-get($dimensions, width, inReferenceToParent, match);
+    height: map-deep-get($dimensions, height, inReferenceToParent, match);
+    background-color: map-deep-get($palette, hidden);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: $modal-content-overlay;
+    display: none;
+
+    @include mobile-screen {
+      display: initial;
+    }
+  }
+
+  &--modal-section {
+    @include flexbox(row, center, center, wrap);
+    margin: map-deep-get($dimensions, margin, center);
+    width: map-deep-get($dimensions, width, inReferenceToParent, smaller);
+    margin-top: map-deep-get($dimensions, margin, md);
+    padding-bottom: map-deep-get($dimensions, padding, sm);
+  }
+
+  &--modal-item {
+    @include flexbox(column, space-between, space-between);
+    padding: map-deep-get($dimensions, padding, md) map-deep-get($dimensions, padding, lg);
+    height: map-deep-get($elements, modal, item, height);
+    width: map-deep-get($elements, modal, item, width);
+    border-bottom: 2px solid map-deep-get($palette, dimmed);
+  }
+}

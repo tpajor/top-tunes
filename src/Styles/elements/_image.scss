@@ -1,0 +1,7 @@
+.image {
+  &--cover {
+    margin: map-deep-get($dimensions, margin, center);
+    margin-top: map-deep-get($dimensions, margin, negativeSm);
+    width: map-deep-get($elements, modal, item, image, width);
+  }
+}

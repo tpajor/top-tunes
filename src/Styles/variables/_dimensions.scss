@@ -1,0 +1,4 @@
+@import './resolution';
+
+$list-height: calc(100vh - 279px);
+$modal-max-width: calc($max-content-width - 30%);

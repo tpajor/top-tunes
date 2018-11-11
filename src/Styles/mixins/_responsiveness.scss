@@ -1,0 +1,7 @@
+@import '../variables/resolution';
+
+@mixin mobile-screen {
+  @media screen and (max-width: $start-mobile-screen) {
+    @content;
+  }
+}

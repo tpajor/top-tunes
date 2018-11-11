@@ -1,0 +1,137 @@
+@import './variables/typography';
+@import './variables/resolution';
+
+$palette: (
+  background:#F6F6F6,
+  backgroundAlternate: white,
+  backgroundOdd: rgba(226, 226, 226, 1),
+  backgroundEven: rgba(226, 226, 226, 0.5),
+
+  primary: #0097D9,
+  secondary: #36363A,
+  tertiary: #B2B2BF,
+
+  placeholder: #7C7C95,
+  warning: #E56257,
+
+  dimmed: rgba(208, 208, 208, 0.6),
+  hidden: rgba(255, 255, 255, 0),
+);
+
+$typography: (
+  family: (
+    light: $global-light-font-family,
+    regular: $global-regular-font-family,
+    semibold: $global-semibold-font-family,
+    bold: $global-bold-font-family,
+  ),
+
+  sizes: (
+    sm: 0.875rem,
+    md: 1rem,
+    lg: 1.5rem,
+    xlg: 2rem,
+  ),
+
+  lineHeights: (
+    sm: 1.25rem,
+    md: 1.5rem,
+    lg: 2.25rem,
+    xlg: 3rem,
+  ),
+);
+
+$dimensions: (
+  margin: (
+    center: 0 auto,
+
+    xs: 10px,
+    sm: 15px,
+    md: 30px,
+    lg: 40px,
+    xlg: 150px,
+
+    relativeSm: 7.5%,
+
+    negativeSm: -15px,
+  ),
+
+  padding: (
+    xs: 10px,
+    sm: 15px,
+    md: 30px,
+    lg: 50px,
+    xlg: 150px,
+  ),
+
+  width: (
+    maxWidth: $max-content-width,
+    matchViewport: 100vw,
+
+    inReferenceToParent: (
+      half: 50%,
+      smaller: 80%,
+      match: 100%,
+    ),
+  ),
+
+  height: (
+    matchViewport: 100vh,
+
+    inReferenceToParent: (
+      half: 50%,
+      smaller: 80%,
+      match: 100%,
+    ),
+  ),
+);
+
+$border: (
+  radius: (
+    standard: 4px,
+    circle: 50%,
+  ),
+
+  shadows: (
+    shadow: 5px 3px 15px rgba(0, 0, 0, 0.07),
+    shadowAlternate: 0 5px 10px rgba(0, 0, 0, 0.5),
+    shadowIntense: 0.5px 0.5px rgba(0, 0, 0, 0.7),
+    shadowOdd: 2px 2px 6px rgba(0, 0, 0, 0.24),
+    shadowEven: 2px 2px 6px rgba(0, 0, 0, 0.16),
+  ),
+
+  primary: 1px solid #d2d2d2,
+);
+
+$elements: (
+  modal: (
+    maxWidth: 861px,
+    width: 75%,
+    height: 75%,
+
+    item: (
+      width: 300px,
+      height: 140px,
+
+      image: (
+        width: 100px,
+      ),
+    ),
+  ),
+
+  form: (
+    inputs: (
+      padding: 0 30px 0 20px,
+      width: 275px,
+      height: 40px,
+    ),
+  ),
+
+  animations: (
+    spinner: (
+      width: 50px,
+      height: 50px,
+    ),
+  ),
+);
+

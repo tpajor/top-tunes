@@ -1,0 +1,55 @@
+{
+  "extends": [
+    "tslint-react",
+    "tslint-config-airbnb"
+  ],
+  "rules": {
+    "indent": [
+      true,
+      "spaces",
+      2
+    ],
+    "no-else-after-return": false,
+    "quotemark": [
+      true,
+      "single",
+      "avoid-escape"
+    ],
+    "eofline": true,
+    "array-bracket-spacing": [
+      true,
+      "always"
+    ],
+    "ter-indent": [
+      false
+    ],
+    "semicolon": [
+      true,
+      "always"
+    ],
+    "switch-final-break": [
+      true,
+      "always"
+    ],
+    "trailing-comma": [
+      true,
+      {
+        "multiline": {
+          "arrays": "always",
+          "objects": "always"
+        },
+        "singleline": "never"
+      }
+    ],
+    "max-line-length": [
+      true,
+      {
+        "limit": 120,
+        "ignore-pattern": "^import |^export {(.*?)} | //"
+      }
+    ],
+    "variable-name": false,
+    "jsx-boolean-value": false,
+    "import-name": false
+  }
+}

@@ -1,11 +1,14 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
-import App from './App';
+
+import TopTunesMainView, { IProps } from './TopTunesMainView';
 
 function setup() {
-  const props = {};
+  const props: IProps = {
+    location: 'test',
+  };
 
-  const wrapper = shallow(<App {...props} />);
+  const wrapper = shallow(<TopTunesMainView {...props} />);
 
   return {
     wrapper,
@@ -13,7 +16,7 @@ function setup() {
   };
 }
 
-describe('App component', () => {
+describe('TopTunesMainView component', () => {
   it('should match snapshot if no change was intended', () => {
     const { wrapper } = setup();
 

@@ -1,11 +1,14 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
-import App from './App';
+
+import Error, { IProps } from './Error';
 
 function setup() {
-  const props = {};
+  const props: IProps = {
+    error: 'error',
+  };
 
-  const wrapper = shallow(<App {...props} />);
+  const wrapper = shallow(<Error {...props} />);
 
   return {
     wrapper,
@@ -13,7 +16,7 @@ function setup() {
   };
 }
 
-describe('App component', () => {
+describe('Error component', () => {
   it('should match snapshot if no change was intended', () => {
     const { wrapper } = setup();
 

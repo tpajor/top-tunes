@@ -1,0 +1,69 @@
+%list-shared {
+  font-family: map-deep-get($typography, family, light);
+  font-size: map-deep-get($typography, sizes, lg);
+  line-height: map-deep-get($typography, lineHeights, lg);
+  color: map-deep-get($palette, tertiary);
+}
+
+.text {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+
+  &--title {
+    font-family: map-deep-get($typography, family, semibold);
+    font-size: map-deep-get($typography, sizes, xlg);
+    line-height: map-deep-get($typography, lineHeights, xlg);
+    color: map-deep-get($palette, primary);
+
+    @include mobile-screen {
+      font-size: map-deep-get($typography, sizes, lg);
+      line-height: map-deep-get($typography, lineHeights, lg);
+    }
+  }
+
+  &--title-secondary {
+    font-family: map-deep-get($typography, family, light);
+  }
+
+  &--list-item-title {
+    font-size: map-deep-get($typography, sizes, sm);
+    line-height: map-deep-get($typography, lineHeights, sm);
+    color: map-deep-get($palette, secondary);
+  }
+
+  &--highlight {
+    margin-right: map-deep-get($dimensions, margin, xs);
+    font-size: map-deep-get($typography, sizes, md);
+    line-height: map-deep-get($typography, lineHeights, md);
+    font-family: map-deep-get($typography, family, bold);
+    color: map-deep-get($palette, primary);
+  }
+
+  &--info {
+    @extend %list-shared;
+  }
+
+  &--error {
+    @extend %list-shared;
+    color: map-deep-get($palette, warning);
+  }
+
+  &--modal-item-title {
+    color: map-deep-get($palette, secondary);
+    text-align: left;
+    font-size: map-deep-get($typography, sizes, lg);
+  }
+
+  &--modal-item-text {
+    color: map-deep-get($palette, tertiary);
+    text-align: right;
+    font-size: map-deep-get($typography, sizes, lg);
+  }
+
+  &--modal-item-rights {
+    color: map-deep-get($palette, tertiary);
+    text-align: right;
+    font-size: map-deep-get($typography, sizes, sm);
+  }
+}

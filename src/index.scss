@@ -1,14 +1,24 @@
+@import './Styles/theme';
+
+@import './Styles/functions/deep-get';
+
+@import './Styles/variables/typography';
+
+@import './Styles/elements/container';
+@import './Styles/elements/text';
+@import './Styles/elements/form/input';
+@import './Styles/elements/link';
+@import './Styles/elements/image';
+
+@import './Styles/animations/spinner';
+@import './Styles/animations/slide';
+
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  box-sizing: border-box;
+  background-color: map-deep-get($palette, background);
+  font-family: map-deep-get($typography, family, regular);;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
