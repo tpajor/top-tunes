@@ -12,8 +12,14 @@ import { rootReducer } from './Store/rootReducer';
 import { createSagas } from './Store/createSagas';
 
 const rootEl = document.getElementById('root');
+let composeEnhancers;
 
-const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+if (process.env.NODE_ENV === 'development' && (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) {
+  composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
+} else {
+  composeEnhancers = compose;
+}
+
 const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(
