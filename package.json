@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "pre-install": "npm install -g serve",
-    "post-install": "serve -s build",
+    "preinstall": "npm install -g serve",
+    "postinstall": "serve -s build",
     "dev": "react-scripts start",
     "start": "serve -s build",
     "build": "react-scripts build",
