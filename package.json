@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "preinstall": "npm install -g serve",
-    "postinstall": "serve -s build",
+    "postinstall": "npm run build",
     "dev": "react-scripts start",
     "start": "serve -s build",
     "build": "react-scripts build",
