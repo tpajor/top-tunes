@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
+    "pre-install": "npm install -g serve",
+    "post-install": "serve -s build",
+    "dev": "react-scripts start",
+    "start": "serve -s build",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "lint": "tslint -p . -c tslint.json",
